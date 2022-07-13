@@ -1,1 +1,165 @@
-<p>perfil works!</p>
+<main>
+    <div class="container">
+      <div class="row imgRow">
+        <section class="col s12 m2 sectionImg">
+          <img
+            class="fotoPerfil"
+            src="assets/img/logo-usuario.png"
+            alt="logo cliente"
+          />
+        </section>
+
+        <section class="col s12 m10">
+          <form action="#" >
+            <div class="row">
+              <div class="input-field col s12 m6">
+                <input id="clientecnpj" type="text" class="validate" />
+                <label for="cnpj">CNPJ</label>
+              </div>
+
+              <div class="input-field col s12 m6">
+                <input id="razaoSocial" type="password" class="validate" />
+                <label for="razaoSocial">Razão Social</label>
+              </div>
+
+              <div class="input-field col s12 m6">
+                <input id="email" type="email" class="validate" />
+                <label for="email">Email</label>
+              </div>
+
+              <div class="input-field col s12 m6">
+                <input id="senha" type="password" class="validate" />
+                <label for="senha">Senha</label>
+              </div>
+
+              <div class="input-field col s12 m6">
+                <input
+                  id="telefoneFixo"
+                  type="tel"
+                  class="validate"
+                  placeholder="(##) ####-####"
+                />
+                <label for="telefoneFixo">Telefone Fixo</label>
+              </div>
+
+              <div class="input-field col s12 m6">
+                <input
+                  id="telefoneCelular"
+                  type="tel"
+                  class="validate"
+                  placeholder="(##) #####-####"
+                />
+                <label for="telefoneCelular">Telefone Celular</label>
+              </div>
+
+              <div class="input-field col s12 m6">
+                <input
+                  id="cep"
+                  type="text"
+                  class="validate"
+                  placeholder="#####-###"
+                />
+                <label for="cep">Cep</label>
+              </div>
+
+              <div class="input-field col s12 m6">
+                <input id="rua" type="text" class="validate" />
+                <label for="rua">Rua</label>
+              </div>
+
+              <div class="col s12 m6">
+                <div class="row">
+                  <div class="input-field col s6 m4">
+                    <input id="numero" type="text" class="validate" />
+                    <label for="numero">Número</label>
+                  </div>
+
+                  <div class="input-field col s6 m8">
+                    <input id="complemento" type="text" class="validate" />
+                    <label for="complemento">Complemento</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m6">
+                <div class="row">
+                  <div class="input-field col s12 m12">
+                    <input id="bairro" type="text" class="validate" />
+                    <label for="bairro">Bairro</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m6">
+                <div class="row">
+                  <div class="input-field col s12 m6">
+                    <select name="estadoEndereco" id="estadoEndereco">
+                      <option value="">Estado</option>
+                      <option value="12">AC</option>
+                      <option value="27">AL</option>
+                      <option value="13">AM</option>
+                      <option value="16">AP</option>
+                      <option value="29">BA</option>
+                      <option value="23">CE</option>
+                      <option value="53">DF</option>
+                      <option value="32">ES</option>
+                      <option value="52">GO</option>
+                      <option value="21">MA</option>
+                      <option value="51">MT</option>
+                      <option value="50">MS</option>
+                      <option value="31">MG</option>
+                      <option value="15">PA</option>
+                      <option value="25">PB</option>
+                      <option value="41">PR</option>
+                      <option value="26">PE</option>
+                      <option value="22">PI</option>
+                      <option value="33">RJ</option>
+                      <option value="24">RN</option>
+                      <option value="11">RO</option>
+                      <option value="43">RS</option>
+                      <option value="14">RR</option>
+                      <option value="42">SC</option>
+                      <option value="28">SE</option>
+                      <option value="35">SP</option>
+                      <option value="17">TO</option>
+                    </select>
+                  </div>
+
+                  <div class="input-field col s12 m6">
+                    <input id="cidade" type="text" class="validate" />
+                    <label for="cidade">Cidade</label>
+                  </div>
+                </div>
+              </div>
+              <div class="file-field input-field col s12 m6">
+                <div class="btn blue col s4 m2">
+                  <span>File</span>
+                  <input type="file" multiple />
+                </div>
+                <div class="file-path-wrapper col s8 m10">
+                  <input
+                    class="file-path validate"
+                    type="text"
+                    placeholder="Adicione aqui sua logo"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="col s12 m6 bntPerfil">
+            <a class="waves-effect waves-light btn-small blue darken-4"
+              >Alterar dados</a
+            >
+          </div>
+
+          <div class="col s12 m6 bntPerfil">
+            <a onclick="M.toast({html: 'Alterações enviadas', classes: 'rounded green'})" class="waves-effect waves-light btn-small blue darken-4"
+              >Salvar alterações</a
+            >
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- fim do container -->
+  </main>

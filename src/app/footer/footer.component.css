@@ -1,0 +1,22 @@
+.footer-copyright{
+    height: 45px;
+    padding-top: 1%;
+  }
+  
+  .dropdown-content li>a, .dropdown-content li>span {
+    color:var(--azul-oscuro);  
+  }
+  
+  .social{
+    margin: 0 5px; 
+  }
+  
+  @media only screen and (max-width: 600px) {
+    
+    .copyright{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  
+  }
