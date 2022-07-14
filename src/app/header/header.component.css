@@ -5,11 +5,13 @@ nav a.sidenav-trigger i {
   height: 64px;
   line-height: 64px;
 }
+
 .logo-nav {
   width: 134px;
   margin-top: 0px;
   margin: 6% 15%;
 }
+
 .logout:hover{
   text-decoration-line: underline;
 }

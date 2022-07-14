@@ -5,7 +5,6 @@ import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
-
   {
     path: 'home',
     component: HomeComponent
