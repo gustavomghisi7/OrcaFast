@@ -1,9 +1,38 @@
 {
-  "posts": [
+  "usuarios": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "razaoSocial": "MM Construtora",
+      "cnpj": "12.128.319/1111-99",
+      "email":"mmconstrutora@gmail.com",
+      "senha":"12345",
+      "telefone":"(48) 111-222",
+      "celular": "(48) 9 111-666",
+      "cep": "80030-156",
+      "rua":"Almirante Bastos",
+      "numeroEndereco": 123,
+      "complementoEndereco": "quadra 19",
+      "bairro":"Rio Tavares",
+      "estado": "SC",
+      "cidade": "Florianópolis",
+      "logoUsuario": "imagem logo usuario"
+    },
+    {
+      "id": 4,
+      "razaoSocial": "Isabella e Raimunda Advocacia Ltda",
+      "cnpj": "52.128.319/0001-09",
+      "email":"administracao@isabellaeraimundaadvocacialtda.com.br",
+      "senha":"74930",
+      "telefone":"(19) 2922-1173",
+      "celular": "(19) 99411-1810",
+      "cep": "80030-156",
+      "rua":"Rua Cinco",
+      "numeroEndereco": 131,
+      "complementoEndereco": "quadra 19",
+      "bairro":"Vila Chico Amaral",
+      "estado": "SP",
+      "cidade": "Campinas",
+      "logoUsuario": "imagem logo usuario"
     }
   ],
   "comments": [
