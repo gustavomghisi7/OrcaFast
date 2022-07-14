@@ -1,0 +1,220 @@
+body {
+    background-color: #f4eeee
+}
+
+.container {
+    width: 100% !important;
+}
+
+.h1-italic-azul {
+    color: var(--azul-oscuro);
+    font-style: italic;
+}
+
+nav .nav-wrapper {
+    color: #64b5f6 !important;
+}
+
+
+/* 
+    Foi usada pra colocar background azul na div com a logo,
+    na div do texto + imagem do porquinho e na div do box-inferior
+    que está servindo para arrendondar as bordas
+*/
+.bg-azul {
+    background-color: var(--azul-claro-bg) !important;
+}
+
+
+/* Cores e styles dos cards */
+.bg-card-1 {
+    background-color: #E2E9F6;
+}
+
+.bg-card-2 {
+    background-color: #9BC6FF;
+}
+
+.bg-card-3 {
+    background-color: #5090E6;
+}
+
+.ajuste-card {
+    height: 460px;
+}
+
+.padding-img {
+    padding-top: 40px
+}
+
+
+/*
+    Classe para zerar a margem inferior das divs onde for aplicada
+    tá sendo usada na row que contém a logo e na row que contém o texto com e a imagem do porquinho
+    a margem ficou zerada pra deixar essa parte que tá com background azul com aparência de um bloco único
+*/
+.zerarMargem{
+    margin-bottom: 0 !important;
+}
+
+.zerarMargem-equipe {
+    margin-top: 0 !important;
+}
+
+
+/* Está sendo declarada na div que contém a logo, para não ficar colada no topo da página */
+.margem{
+    margin-top: 20px;
+}
+
+.margem-secao{
+    margin-top: 120px;
+}
+
+/* Usado para fazer a primeira e última parte da página ficar arredondada */
+.box-inferior {
+    height: 100px;
+    background-color: var(--azul-claro-bg);
+    border-radius: 0 0 75% 75%;
+}
+
+.box-inferior-equipe {
+    height: 100px;
+    background-color: var(--azul-claro-bg);
+    border-radius: 75% 75% 0 0;
+}
+
+.card-panel {
+    border-radius: 20px;
+}
+
+/*----------- ORGANIZANDO AS FOTOS -------------*/
+/* Faz a largura da imagem ocupar apenas 85% da col onde está (deixou a aparência mais bonita) */
+img.responsive-img,
+video.responsive-video {
+    max-width: 85%;
+}
+
+/* 
+    Classe declarada em todas as divs col contendo fotos da
+    equipe para criar um pouco de espaço entre as imagens
+*/
+.margemInferior{
+    margin-bottom: 20px;
+}
+
+/* Pra diminuir a distância entre o título e a imagem que ele descreve */
+h6 {
+    margin: .2rem 0 .46rem 0;
+    text-align: center;
+    color: #2196f3;
+    font-weight: 800;
+    margin-bottom: -10px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.boxName{
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+/* Formulário */
+.box-form {
+    height: 380px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.box-form>h2 {
+    margin-top: 25px;
+}
+
+.links {
+    text-align: left;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+input:focus {
+    border-color: var(--azul) !important;
+    box-shadow: 0 1px 0 0 var(--azul) !important;
+}
+
+.input-field>label.active {
+    color: #2196f3 !important;
+}
+
+.links:hover {
+    font-style: italic;
+}
+
+.ajusteBotao {
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+
+/* Definindo configurações para as imagens nas telas com tamanho superior a 600px */
+@media (min-width: 600px){
+    .imgEquipeMargin {
+        /*colocar margem de 4%  à direita onde a classe é declarada*/
+        margin-right: 4%!important;
+    }
+    
+    .primeiraImgMargin{
+        /*coloca margem de 4% à esquerda onde a classe é declarada*/
+        margin-left: 8%!important;
+    }
+    
+    .espacoTexto{
+        margin: .2rem 0 2.912rem 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+    main {
+        margin: 0 20px;
+    }
+
+    /* Para ajustar as fotos da equipe no celular */
+    .ultimaImgMargin {
+        /* Coloca margem de 25% à esquerda onde a classe é declarada */
+        margin-left: 25%!important;
+    }
+
+    /* Ajusta margem esquerda no layout para mobile */
+    div.row .box-inferior {
+        margin-left: 50px;
+    }
+
+    /* Apaga ilustra de pc no layout mobile */
+    img.col.s10.m4.center-align {
+        display: none;
+    }
+
+    div.row.margem-secao-2 {
+        margin-top: 60px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top:0;
+    }
+
+    .h2-azul-oscuro {
+        font-size: 35px ; 
+    }
+
+    .h1-azul{
+        font-size: 55px;
+    }
+
+    /* Formulário */
+    .linha-form {
+        border-right: 0;
+    }
+}

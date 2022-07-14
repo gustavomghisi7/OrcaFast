@@ -14,8 +14,6 @@
     --azul-claro-bg: rgba(101, 181, 246, 0.27);
     --branco: #ffffff;
     --preto: #000000;
-
-
 }
 
 .h1-azul {
@@ -48,4 +46,4 @@ body {
     flex-direction: column;
     font-family: 'Nunito', sans-serif;
     color: var(--indigo-oscuro);
-  }
+}
