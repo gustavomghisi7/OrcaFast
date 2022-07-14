@@ -1,9 +1,18 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+  "produtos": [
+    { 
+      "id":1,
+      "codigo": 34563,
+      "produto": "Cimento",
+      "descricao": "Cimento 50kg concreto convencional",
+      "marca": "Votoran"
+    },
+    { 
+      "id":2,
+      "codigo": 56463,
+      "produto": "Cimento",
+      "descricao": "Cimento 50kg uso geral reboco concreto",
+      "marca": "Cauê"
     }
   ],
   "comments": [

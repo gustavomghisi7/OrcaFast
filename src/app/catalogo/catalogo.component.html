@@ -1,1 +1,114 @@
-<p>catalogo works!</p>
+<main>
+    <div class="container" style="padding-top: 5%;">
+
+      <div class="row zerarMargem bg-azul">
+        <h3 class="tituloCatalogo h3-azul-oscuro" style="margin-left:5%;">Selecione os produtos que deseja orçar</h3>
+      </div>
+
+      <div class="row">
+        <!-- inicio inputs file e buscar -->
+        <div class="col s12 m6">
+          <form action="#">
+            <div class="file-field input-field">
+              <div class="btn blue">
+                <span>File</span>
+                <input type="file" multiple>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate upload" type="text" placeholder="Suba sua planilha de orçamento">
+              </div>
+            </div>
+            <div class="planilha">Baixar planilha modelo para preencher</div>
+          </form>
+        </div>
+
+        <div class="search  s12 m6">
+          <form class="col s12 m6">
+            <div class="search">
+              <div class="input-field ">
+                <i class="material-icons prefix blue-text">search</i>
+                <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                <label for="icon_prefix2">Buscar produtos por nome, marca, código...</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Fim inputs file e buscar -->
+      </div>
+
+      <div class="row">
+        <!-- inicio cards-->
+        
+        <div class="col s12 m4" *ngFor="let prod of produtos">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img class="materialboxed" src="upload-catalogo/tijolo-refratario.PNG">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>{{prod.codigo}}</p>
+                <p>{{prod.descricao}}</p>
+                <p>{{prod.marca}}</p>
+                <p class="card-action">
+                  <label>
+                    <input type="checkbox" />
+                    <span class="blue-text">Selecionar</span>
+                    <input type="number" name="quantidade" id="quantidade" placeholder="0">
+                  </label>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- fim das card-->
+      </div>
+      <div class="row">
+        <!-- inicio carrinho seleição  -->
+        <div class="col s12">
+          <ul class="collapsible">
+
+            <li>
+              <div class="collapsible-header blue-text">
+                <i class="material-icons">check_circle</i>Itens selecionados
+              </div>
+              <div class="collapsible-body">
+                <div class="chip">
+                  <img src="upload-catalogo/cimento-votoram.PNG" alt="">
+                  Cimento Votoran
+                  <i class="close material-icons">close</i>
+                </div>
+                <div class="chip">
+                  <img src="upload-catalogo/cimento-caue.PNG" alt="">
+                  Cimento Caué
+                  <i class="close material-icons">close</i>
+                </div>
+                <div class="chip">
+                  <img src="upload-catalogo/tela-arame1.PNG" alt="">
+                  Tela Amarração
+                  <i class="close material-icons">close</i>
+                </div>
+                <div class="chip">
+                  <img src="upload-catalogo/tijolo-laranja.PNG" alt="">
+                  Tijolo Cepazzi
+                  <i class="close material-icons">close</i>
+                </div>
+                <div class="chip">
+                  <img src="upload-catalogo/tijolo-vidro.PNG" alt="">
+                  Tijolo Vitraltec
+                  <i class="close material-icons">close</i>
+                </div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- fim carrinho seleição  -->
+      </div>
+      <!-- botão orçamento  -->
+      <a class=" btnOrcar waves-effect waves-light btn-small  blue darken-4"><i
+          class="material-icons right">file_download</i>Solicitar orçamento</a>
+
+    </div>
+  </main>
+  <script src="./catalogo.js"></script>
