@@ -17,4 +17,8 @@ export class UsuariosService {
   getUmUsuario(id:number){
     return this.http.get(`http://localhost:3000/usuarios/${id}`)
   }
+
+  alterarUsuario(dados:any){
+    return this.http.put(`http://localhost:3000/usuarios/${dados.id}`, dados)
+  }
 }

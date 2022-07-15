@@ -170,11 +170,8 @@
         </div>
 
         <div class="col s12 m6 bntPerfil">
-          <a
-            onclick="M.toast
-            (
-              { html: 'Alterações enviadas', classes: 'rounded green' }
-            )"
+          <a (click)="salvarAlteracoes()"
+            
             class="waves-effect waves-light btn-small blue darken-4"
           >
             Salvar alterações

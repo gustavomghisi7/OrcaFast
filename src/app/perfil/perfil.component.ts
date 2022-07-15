@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UsuariosService } from '../usuarios.service';
 
+declare const M: any
+
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
@@ -29,6 +31,7 @@ export class PerfilComponent implements OnInit {
   constructor(private service:UsuariosService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    M.AutoInit()
    const routeParams = this.route.snapshot.paramMap;
    this.idUsuario = Number(routeParams.get('idusuario'))
    this.service.getUmUsuario(this.idUsuario).subscribe(data => {
@@ -37,7 +40,14 @@ export class PerfilComponent implements OnInit {
    })}
    
  
-  msg: string = ""
+  msg: string = "Usuário alterado"
+
+  salvarAlteracoes(): void{
+    this.service.alterarUsuario(this.usuario).subscribe(data => M.toast
+    (
+      { html: this.msg, classes: 'rounded green' }
+    ))
+  }
  
   
 }
