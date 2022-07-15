@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { UsuariosService } from '../usuarios.service';
 
 @Component({
@@ -8,19 +9,21 @@ import { UsuariosService } from '../usuarios.service';
 })
 export class PerfilComponent implements OnInit {
 
-  usuarios: any = []
+  idUsuario: number = 0
+  usuario: any = {}
+  
+  constructor(private service:UsuariosService, private route: ActivatedRoute) { }
 
-  constructor(private service:UsuariosService) { }
-
-  ngOnInit(): void {    
-  }
-
-  mostrarUsuarios():void{
-    this.service.getUsuarios().subscribe(data => 
-      {
-        this.usuarios = data
-        console.log(this.usuarios)
-      })
-  }
-
+  ngOnInit(): void {
+   const routeParams = this.route.snapshot.paramMap;
+   this.idUsuario = Number(routeParams.get('idusuario'))
+   this.service.getUmUsuario(this.idUsuario).subscribe(data => {
+    this.usuario = data
+    console.log(this.usuario)
+   })}
+   
+ 
+  msg: string = ""
+ 
+  
 }

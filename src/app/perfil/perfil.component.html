@@ -1,15 +1,12 @@
 <main>
-
-
-  <div>{{usuarios.id}}</div>
-  <button class="waves-effect waves-light btn-large" (click)="mostrarUsuarios()">Consultar</button>
-
-
   <div class="container">
     <div class="row imgRow">
-
       <section class="col s12 m2 sectionImg">
-        <img class="fotoPerfil" src="assets/img/logo-usuario.png" alt="logo cliente" />
+        <img
+          class="fotoPerfil"
+          src="assets/img/logo-usuario.png"
+          alt="logo cliente"
+        />
       </section>
 
       <section class="col s12 m10">
@@ -21,7 +18,12 @@
             </div>
 
             <div class="input-field col s12 m6">
-              <input id="razaoSocial" type="password" class="validate" readonly />
+              <input
+                id="razaoSocial"
+                type="password"
+                class="validate"
+                readonly
+              />
               <label for="razaoSocial">Razão Social</label>
             </div>
 
@@ -36,17 +38,32 @@
             </div>
 
             <div class="input-field col s12 m6">
-              <input id="telefoneFixo" type="tel" class="validate" placeholder="(##) ####-####" />
+              <input
+                id="telefoneFixo"
+                type="tel"
+                class="validate"
+                placeholder="(##) ####-####"
+              />
               <label for="telefoneFixo">Telefone Fixo</label>
             </div>
 
             <div class="input-field col s12 m6">
-              <input id="telefoneCelular" type="tel" class="validate" placeholder="(##) #####-####" />
+              <input
+                id="telefoneCelular"
+                type="tel"
+                class="validate"
+                placeholder="(##) #####-####"
+              />
               <label for="telefoneCelular">Telefone Celular</label>
             </div>
 
             <div class="input-field col s12 m6">
-              <input id="cep" type="text" class="validate" placeholder="#####-###" />
+              <input
+                id="cep"
+                type="text"
+                class="validate"
+                placeholder="#####-###"
+              />
               <label for="cep">Cep</label>
             </div>
 
@@ -81,7 +98,11 @@
             <div class="col s12 m6">
               <div class="row">
                 <div class="input-field col s12 m6">
-                  <select style="background-color: red;" name="estadoEndereco" id="estadoEndereco">
+                  <select
+                    style="background-color: red"
+                    name="estadoEndereco"
+                    id="estadoEndereco"
+                  >
                     <option value="">Estado</option>
                     <option value="12">AC</option>
                     <option value="27">AL</option>
@@ -126,7 +147,11 @@
                 <input type="file" multiple />
               </div>
               <div class="file-path-wrapper col s8 m10">
-                <input class="file-path validate" type="text" placeholder="Adicione aqui sua logo" />
+                <input
+                  class="file-path validate"
+                  type="text"
+                  placeholder="Adicione aqui sua logo"
+                />
               </div>
             </div>
           </div>
@@ -139,16 +164,17 @@
         </div>
 
         <div class="col s12 m6 bntPerfil">
-          <a onclick="M.toast
+          <a
+            onclick="M.toast
             (
               { html: 'Alterações enviadas', classes: 'rounded green' }
-            )" class="waves-effect waves-light btn-small blue darken-4">
-
+            )"
+            class="waves-effect waves-light btn-small blue darken-4"
+          >
             Salvar alterações
           </a>
         </div>
       </section>
-
     </div>
   </div>
 </main>

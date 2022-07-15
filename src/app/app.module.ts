@@ -12,6 +12,7 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AdmComponent } from './adm/adm.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HomeComponent,
     PerfilComponent,
-    CatalogoComponent
+    CatalogoComponent,
+    AdmComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdmComponent } from './adm/adm.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
@@ -14,9 +15,14 @@ const routes: Routes = [
     component: CatalogoComponent
   },
   {
-    path: 'perfil',
+    path: 'perfil/:idusuario',
     component: PerfilComponent
+  },
+  {
+    path: 'adm',
+    component: AdmComponent
   }
+
 ];
 
 @NgModule({
