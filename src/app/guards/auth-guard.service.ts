@@ -14,7 +14,7 @@ export class AuthGuardService implements CanActivate {
     if (tahLogado) {
       return false
     }else{
-      this.router.navigate(['/login'])
+      this.router.navigate(['/home'])
       return false
     }
     
