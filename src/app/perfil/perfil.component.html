@@ -13,32 +13,36 @@
         <!-- <form action="#"> -->
           <div class="row">
             <div class="input-field col s12 m6">
-              <input [(ngModel)]="usuario.cnpj" id="clientecnpj" type="text" class="validate" readonly />
-              <label for="cnpj">CNPJ</label>
+              <label for="cnpj" class="active">CNPJ</label>
+              <input [(ngModel)]="usuario.cnpj" id="clientecnpj" type="text" class="validate" readonly placeholder=" "/>
+              
             </div>
 
             <div class="input-field col s12 m6">
               <input
+                [(ngModel)]="usuario.razaoSocial"
                 id="razaoSocial"
-                type="password"
+                type="text"
                 class="validate"
                 readonly
+                placeholder=" "
               />
               <label for="razaoSocial">Razão Social</label>
             </div>
 
             <div class="input-field col s12 m6">
-              <input id="email" type="email" class="validate" />
+              <input [(ngModel)]="usuario.email" id="email" type="email" class="validate" placeholder=" "/>
               <label for="email">Email</label>
             </div>
 
             <div class="input-field col s12 m6">
-              <input id="senha" type="password" class="validate" />
+              <input [(ngModel)]="usuario.senha" id="senha" type="password" class="validate" placeholder=" "/>
               <label for="senha">Senha</label>
             </div>
 
             <div class="input-field col s12 m6">
               <input
+                [(ngModel)]="usuario.telefone"
                 id="telefoneFixo"
                 type="tel"
                 class="validate"
@@ -49,6 +53,7 @@
 
             <div class="input-field col s12 m6">
               <input
+              [(ngModel)]="usuario.celular"
                 id="telefoneCelular"
                 type="tel"
                 class="validate"
@@ -59,6 +64,7 @@
 
             <div class="input-field col s12 m6">
               <input
+                [(ngModel)]="usuario.cep"
                 id="cep"
                 type="text"
                 class="validate"
@@ -68,19 +74,19 @@
             </div>
 
             <div class="input-field col s12 m6">
-              <input id="rua" type="text" class="validate" />
+              <input [(ngModel)]="usuario.rua" id="rua" type="text" class="validate" placeholder=" "/>
               <label for="rua">Rua</label>
             </div>
 
             <div class="col s12 m6">
               <div class="row">
                 <div class="input-field col s6 m4">
-                  <input id="numero" type="text" class="validate" />
+                  <input [(ngModel)]="usuario.numeroEndereco" id="numero" type="text" class="validate" placeholder=" "/>
                   <label for="numero">Número</label>
                 </div>
 
                 <div class="input-field col s6 m8">
-                  <input id="complemento" type="text" class="validate" />
+                  <input [(ngModel)]="usuario.complementoEndereco" id="complemento" type="text" class="validate" placeholder=" "/>
                   <label for="complemento">Complemento</label>
                 </div>
               </div>
@@ -89,7 +95,7 @@
             <div class="col s12 m6">
               <div class="row">
                 <div class="input-field col s12 m12">
-                  <input id="bairro" type="text" class="validate" />
+                  <input [(ngModel)]="usuario.bairro" id="bairro" type="text" class="validate" placeholder=" "/>
                   <label for="bairro">Bairro</label>
                 </div>
               </div>
@@ -135,7 +141,7 @@
                 </div>
 
                 <div class="input-field col s12 m6">
-                  <input id="cidade" type="text" class="validate" />
+                  <input [(ngModel)]="usuario.cidade" id="cidade" type="text" class="validate" placeholder=" "/>
                   <label for="cidade">Cidade</label>
                 </div>
               </div>
