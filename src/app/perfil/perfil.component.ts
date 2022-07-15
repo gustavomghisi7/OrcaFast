@@ -11,6 +11,20 @@ export class PerfilComponent implements OnInit {
 
   idUsuario: number = 0
   usuario: any = {}
+  razaoSocial: string = ''
+  cnpj: string = ''
+  email: string = ''
+  senha: string = ''
+  telefone: string = ''
+  celular: string = ''
+  cep: string = ''
+  rua: string = ''
+  numeroEndereco: string = ''
+  complementoEndereco: string = ''
+  bairro: string = ''
+  estado: string = ''
+  cidade: string = ''
+  logoUsuario: string = ''
   
   constructor(private service:UsuariosService, private route: ActivatedRoute) { }
 

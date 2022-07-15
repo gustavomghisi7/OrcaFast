@@ -10,10 +10,10 @@
       </section>
 
       <section class="col s12 m10">
-        <form action="#">
+        <!-- <form action="#"> -->
           <div class="row">
             <div class="input-field col s12 m6">
-              <input id="clientecnpj" type="text" class="validate" readonly />
+              <input [(ngModel)]="usuario.cnpj" id="clientecnpj" type="text" class="validate" readonly />
               <label for="cnpj">CNPJ</label>
             </div>
 
@@ -155,7 +155,7 @@
               </div>
             </div>
           </div>
-        </form>
+        <!-- </form> -->
 
         <div class="col s12 m6 bntPerfil">
           <a class="waves-effect waves-light btn-small blue darken-4">
