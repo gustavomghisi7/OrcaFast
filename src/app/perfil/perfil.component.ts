@@ -31,6 +31,8 @@ export class PerfilComponent implements OnInit {
   constructor(private service:UsuariosService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    M.updateTextFields()
+    
     M.AutoInit()
    const routeParams = this.route.snapshot.paramMap;
    this.idUsuario = Number(routeParams.get('idusuario'))
