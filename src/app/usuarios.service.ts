@@ -16,6 +16,6 @@ export class UsuariosService {
   }
 
   getUmUsuário(id:number){
-    return this.http.get(`${environment.BASE_URL}usuarios/${id}`)
+    return this.http.get(`${environment.BASE_URL}usuarios/${id}` )
   }
 }
