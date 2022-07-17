@@ -12,15 +12,20 @@
       <section class="col s12 m10">
         <!-- <form action="#"> -->
           <div class="row">
+
             <div class="input-field col s12 m6">
-              <label for="cnpj" class="active">CNPJ</label>
-              <input [(ngModel)]="usuario.cnpj" id="clientecnpj" type="text" class="validate" readonly placeholder=" "/>
-              
+              <input [(ngModel)]="usuario.cnpj" 
+                id="clientecnpj" 
+                type="text" 
+                class="validate" 
+                readonly 
+                placeholder=" "
+              />    
+              <label for="cnpj" class="active">CNPJ</label>          
             </div>
 
             <div class="input-field col s12 m6">
-              <input
-                [(ngModel)]="usuario.razaoSocial"
+              <input [(ngModel)]="usuario.razaoSocial"
                 id="razaoSocial"
                 type="text"
                 class="validate"
@@ -31,12 +36,22 @@
             </div>
 
             <div class="input-field col s12 m6">
-              <input [(ngModel)]="usuario.email" id="email" type="email" class="validate" placeholder=" "/>
-              <label for="email">Email</label>
+              <input [(ngModel)]="usuario.email" 
+                id="email" 
+                type="email" 
+                class="validate" 
+                placeholder=" "
+              />
+              <label for="email">E-mail</label>
             </div>
 
             <div class="input-field col s12 m6">
-              <input [(ngModel)]="usuario.senha" id="senha" type="password" class="validate" placeholder=" "/>
+              <input [(ngModel)]="usuario.senha" 
+                id="senha" 
+                type="password" 
+                class="validate" 
+                placeholder=" "
+              />
               <label for="senha">Senha</label>
             </div>
 
@@ -74,19 +89,34 @@
             </div>
 
             <div class="input-field col s12 m6">
-              <input [(ngModel)]="usuario.rua" id="rua" type="text" class="validate" placeholder=" "/>
+              <input [(ngModel)]="usuario.rua" 
+                id="rua" 
+                type="text" 
+                class="validate" 
+                placeholder=" "
+              />
               <label for="rua">Rua</label>
             </div>
 
             <div class="col s12 m6">
               <div class="row">
                 <div class="input-field col s6 m4">
-                  <input [(ngModel)]="usuario.numeroEndereco" id="numero" type="text" class="validate" placeholder=" "/>
+                  <input [(ngModel)]="usuario.numeroEndereco" 
+                    id="numero" 
+                    type="text" 
+                    class="validate" 
+                    placeholder=" "
+                  />
                   <label for="numero">Número</label>
                 </div>
 
                 <div class="input-field col s6 m8">
-                  <input [(ngModel)]="usuario.complementoEndereco" id="complemento" type="text" class="validate" placeholder=" "/>
+                  <input [(ngModel)]="usuario.complementoEndereco"
+                    id="complemento" 
+                    type="text" 
+                    class="validate" 
+                    placeholder=" "
+                  />
                   <label for="complemento">Complemento</label>
                 </div>
               </div>
@@ -95,7 +125,12 @@
             <div class="col s12 m6">
               <div class="row">
                 <div class="input-field col s12 m12">
-                  <input [(ngModel)]="usuario.bairro" id="bairro" type="text" class="validate" placeholder=" "/>
+                  <input [(ngModel)]="usuario.bairro" 
+                    id="bairro" 
+                    type="text" 
+                    class="validate" 
+                    placeholder=" "
+                  />
                   <label for="bairro">Bairro</label>
                 </div>
               </div>
@@ -103,6 +138,7 @@
 
             <div class="col s12 m6">
               <div class="row">
+
                 <div class="input-field col s12 m6">
                   <select
                     style="background-color: red"
@@ -141,7 +177,12 @@
                 </div>
 
                 <div class="input-field col s12 m6">
-                  <input [(ngModel)]="usuario.cidade" id="cidade" type="text" class="validate" placeholder=" "/>
+                  <input [(ngModel)]="usuario.cidade" 
+                    id="cidade" 
+                    type="text" 
+                    class="validate" 
+                    placeholder=" "
+                  />
                   <label for="cidade">Cidade</label>
                 </div>
               </div>
@@ -170,13 +211,11 @@
         </div>
 
         <div class="col s12 m6 bntPerfil">
-          <a (click)="salvarAlteracoes()"
-            
-            class="waves-effect waves-light btn-small blue darken-4"
-          >
+          <a (click)="salvarAlteracoes()" class="waves-effect waves-light btn-small blue darken-4">
             Salvar alterações
           </a>
         </div>
+        
       </section>
     </div>
   </div>
