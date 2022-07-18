@@ -13,7 +13,57 @@
       "produto": "Cimento",
       "descricao": "Cimento 50kg uso geral reboco concreto",
       "marca": "Cauê"
+    },
+    { 
+      "id":3,
+      "codigo": 53363,
+      "produto": "Tela amarração",
+      "descricao": "Tela 10,5cm X 50cm Amarração para Alvenaria",
+      "marca": "Vonder"
+    },
+    { 
+      "id":4,
+      "codigo": 29363,
+      "produto": "Tela amarração",
+      "descricao": "Tela 10,5cm X 50cm Amarração para Alvenaria",
+      "marca": "Vonder"
+    },
+    { 
+      "id":5,
+      "codigo": 29363,
+      "produto": "Tela preta",
+      "descricao": "Tela 1,00x50mt plastico preta galinheiro",
+      "marca": "Cassol"
+    },
+    { 
+      "id":6,
+      "codigo": 11163,
+      "produto": "Telha cerâmica",
+      "descricao": "Telha 88x242cm PVC-Plan Cerâmica",
+      "marca": "Tubozan"
+    },
+    { 
+      "id":7,
+      "codigo": 99169,
+      "produto": "Telha fibra",
+      "descricao": "Telha 95x200cm Fibra Vegetal Ondulada",
+      "marca": "Onduline"
+    },
+    { 
+      "id":8,
+      "codigo": 22169,
+      "produto": "Tijolo cerâmicos",
+      "descricao": "Tijolo 9x14x19cm Cerâmico 6 Furos",
+      "marca": "Cepazzi"
+    },
+    { 
+      "id":9,
+      "codigo": 22169,
+      "produto": "Tijolo refratário",
+      "descricao": "Tijolo 9x11x2cm Refratário churrasqueria",
+      "marca": "Gabriella"
     }
+    
   ],
   "comments": [
     {
