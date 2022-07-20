@@ -13,7 +13,7 @@
       "numeroEndereco": "321",
       "complementoEndereco": "quadra 26",
       "bairro": "Rio Tavares",
-      "estado": "SC",
+      "estado": "2",
       "cidade": "Florianópolis",
       "logoUsuario": "imagem logo usuario"
     },
@@ -21,7 +21,7 @@
       "id": 4,
       "razaoSocial": "Isabella e Raimunda Construtora Ltda",
       "cnpj": "52.128.319/0001-09",
-      "email": "administracao@isabellaeraimundaltda.com.br",
+      "email": "administracao@raimundaltda.com.br",
       "senha": "74930",
       "telefone": "(19) 2922-1173",
       "celular": "(19) 99411-1810",
@@ -63,7 +63,7 @@
       "rua": "Rua Evandyl Pessoa",
       "numeroEndereco": 642,
       "complementoEndereco": "quadra 12",
-      "bairro": "Costa e Silva",
+      "bairro": "Costa e Silve",
       "estado": "PB",
       "cidade": "João Pessoa",
       "logoUsuario": "imagem logo usuario"

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -11,14 +12,14 @@ export class UsuariosService {
 
 
   getUsuarios(){
-    return this.http.get('http://localhost:3000/usuarios')
+    return this.http.get(`${environment.BASE_URL}usuarios`)
   }
 
   getUmUsuario(id:number){
-    return this.http.get(`http://localhost:3000/usuarios/${id}`)
+    return this.http.get(`${environment.BASE_URL}usuarios/${id}`)
   }
 
   alterarUsuario(dados:any){
-    return this.http.put(`http://localhost:3000/usuarios/${dados.id}`, dados)
+    return this.http.put(`${environment.BASE_URL}usuarios/${dados.id}`, dados)
   }
 }
