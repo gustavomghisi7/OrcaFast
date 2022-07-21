@@ -6,7 +6,7 @@
             <!-- início header -->
             <div class="row margem zerarMargem bg-azul">
                 <img class="col s6 m2 margem" src="../../assets/img/sugestao_logo.png" width="100px">
-                <a href="#login" class="col s3 m2 margem waves-effect waves-light btn-small blue right ajusteBotao">
+                <a routerLink='/catalogo' class="col s3 m2 margem waves-effect waves-light btn-small blue right ajusteBotao">
                     ENTRAR
                 </a>
             </div>
@@ -203,3 +203,8 @@
         <!-- fim container -->
     </main>
 </body>
+
+<app-footer></app-footer>
+
+<!-- Navegação entre as páginas -->
+<router-outlet></router-outlet>

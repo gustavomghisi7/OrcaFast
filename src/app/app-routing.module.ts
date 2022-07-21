@@ -7,12 +7,16 @@ import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomeComponent
   },
   {
     path: 'catalogo',
     component: CatalogoComponent
+  },
+  {
+    path: 'perfil',
+    component: PerfilComponent
   },
   {
     path: 'perfil/:idusuario',
@@ -22,11 +26,11 @@ const routes: Routes = [
     path: 'adm',
     component: AdmComponent
   }
-
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

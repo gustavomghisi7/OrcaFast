@@ -1,24 +1,27 @@
-<div class="container" >
-    <h5>Usuários:</h5>
-    <br>
+<app-header></app-header>
+
+<main class="container">
+  
+  <h5>Usuários:</h5><br>
+
     <table>
-        <thead>
-          <tr>
-              <th>ID</th>
-              <th>CNPJ</th>
-              <th>RAZÃO SOCIAL</th>
-            </tr>
-        </thead>
-    
-        <tbody>
-          <tr *ngFor="let usuario of usuarios" >
-            <td>{{usuario.id}}</td>
-            <td>{{usuario.cnpj}}</td>
-            <td>{{usuario.razaoSocial}}</td>
-            <td><a [routerLink]="['/perfil', usuario.id]">Editar</a></td>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>CNPJ</th>
+          <th>RAZÃO SOCIAL</th>
         </tr>
-    </tbody>
-      </table>
-</div>
+      </thead>
+    
+      <tbody>
+        <tr *ngFor="let usuario of usuarios" >
+          <td>{{usuario.id}}</td>
+          <td>{{usuario.cnpj}}</td>
+          <td>{{usuario.razaoSocial}}</td>
+          <td><a [routerLink]="['/perfil', usuario.id]">Editar</a></td>
+        </tr>
+      </tbody>
+    </table>
+</main>
 
-
+<app-footer></app-footer>
