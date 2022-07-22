@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UsuariosService } from '../usuarios.service';
+import { UsuariosService } from '../../services/usuarios.service';
 
 declare const M: any
 
