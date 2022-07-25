@@ -27,7 +27,7 @@
             </div>
 
             <div class="input-field col s12 m6">
-              <input [(ngModel)]="usuario.razaoSocial"
+              <input [(ngModel)]="usuario.razaosocial"
                 id="razaoSocial"
                 type="text"
                 class="validate"
@@ -103,7 +103,7 @@
             <div class="col s12 m6">
               <div class="row">
                 <div class="input-field col s6 m4">
-                  <input [(ngModel)]="usuario.numeroEndereco" 
+                  <input [(ngModel)]="usuario.numeroendereco" 
                     id="numero" 
                     type="text" 
                     class="validate" 
@@ -113,7 +113,7 @@
                 </div>
 
                 <div class="input-field col s6 m8">
-                  <input [(ngModel)]="usuario.complementoEndereco"
+                  <input [(ngModel)]="usuario.complementoendereco"
                     id="complemento" 
                     type="text" 
                     class="validate" 
@@ -140,42 +140,15 @@
 
             <div class="col s12 m6">
               <div class="row">
-
                 <div class="input-field col s12 m6">
-                  <select
-                    style="background-color: red"
-                    name="estadoEndereco"
-                    id="estadoEndereco"
-                  >
-                    <option value="">Estado</option>
-                    <option value="12">AC</option>
-                    <option value="27">AL</option>
-                    <option value="13">AM</option>
-                    <option value="16">AP</option>
-                    <option value="29">BA</option>
-                    <option value="23">CE</option>
-                    <option value="53">DF</option>
-                    <option value="32">ES</option>
-                    <option value="52">GO</option>
-                    <option value="21">MA</option>
-                    <option value="51">MT</option>
-                    <option value="50">MS</option>
-                    <option value="31">MG</option>
-                    <option value="15">PA</option>
-                    <option value="25">PB</option>
-                    <option value="41">PR</option>
-                    <option value="26">PE</option>
-                    <option value="22">PI</option>
-                    <option value="33">RJ</option>
-                    <option value="24">RN</option>
-                    <option value="11">RO</option>
-                    <option value="43">RS</option>
-                    <option value="14">RR</option>
-                    <option value="42">SC</option>
-                    <option value="28">SE</option>
-                    <option value="35">SP</option>
-                    <option value="17">TO</option>
-                  </select>
+                  <input [(ngModel)]="usuario.estado" 
+                    id="estadoendereco" 
+                    name="estadoendereco"
+                    type="text" 
+                    class="validate" 
+                    placeholder=" "
+                  />
+                  <label for="estadoendereco">UF</label>
                 </div>
 
                 <div class="input-field col s12 m6">
