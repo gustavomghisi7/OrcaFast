@@ -1,9 +1,9 @@
 <app-header></app-header>
 
 <main class="container">
-  
   <router-outlet></router-outlet>
-  <h5>Usuários:</h5>
+
+  <h3 class="h3-indigo">Usuários</h3>
   <br />
 
   <table>
@@ -25,7 +25,14 @@
       </tr>
     </tbody>
   </table>
-  <button><a routerLink="/cadastro">Cadastrar novo usuário</a></button>
+  <div class="col s12 m6 bntAdm">
+    <a
+      routerLink="/cadastro"
+      class="waves-effect waves-light btn-small blue darken-4"
+    >
+      Cadastrar Usuário
+    </a>
+  </div>
 </main>
 
 <app-footer></app-footer>
