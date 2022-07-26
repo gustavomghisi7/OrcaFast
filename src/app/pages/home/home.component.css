@@ -104,6 +104,10 @@ video.responsive-video {
 }
 
 /* Pra diminuir a distância entre o título e a imagem que ele descreve */
+.tituloEquipe {
+    margin: 0 0 50px 40px
+}
+
 h6 {
     margin: .2rem 0 .46rem 0;
     text-align: center;
@@ -116,9 +120,13 @@ h2 {
     margin-top: 0;
 }
 
-.boxName{
+.boxName {
     height: 50px;
     margin-bottom: 15px;
+}
+
+.boxName p {
+    margin-top: 12px;
 }
 
 /* Formulário */
@@ -128,7 +136,7 @@ h2 {
     margin-bottom: 50px;
 }
 
-.box-form>h2 {
+.box-form > h2 {
     margin-top: 25px;
 }
 
@@ -158,18 +166,20 @@ input:focus {
 
 
 /* Definindo configurações para as imagens nas telas com tamanho superior a 600px */
-@media (min-width: 600px){
+@media (min-width: 600px) {
+
+
     .imgEquipeMargin {
         /*colocar margem de 4%  à direita onde a classe é declarada*/
         margin-right: 4%!important;
     }
     
-    .primeiraImgMargin{
+    .primeiraImgMargin {
         /*coloca margem de 4% à esquerda onde a classe é declarada*/
         margin-left: 8%!important;
     }
     
-    .espacoTexto{
+    .espacoTexto {
         margin: .2rem 0 2.912rem 0;
     }
 }
@@ -177,6 +187,11 @@ input:focus {
 @media screen and (max-width:600px) {
     main {
         margin: 0 20px;
+    }
+
+    /* Ajusta o titulo da equipe para celular */
+    .tituloEquipe {
+        margin: 0 0 50px 0px
     }
 
     /* Para ajustar as fotos da equipe no celular */
