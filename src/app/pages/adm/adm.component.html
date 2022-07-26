@@ -1,27 +1,29 @@
 <app-header></app-header>
 
 <main class="container">
-  
-  <h5>Usuários:</h5><br>
+  <button><a routerLink="/cadastro">Cadastrar novo usuário</a></button>
+  <router-outlet></router-outlet>
+  <h5>Usuários:</h5>
+  <br />
 
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>CNPJ</th>
-          <th>RAZÃO SOCIAL</th>
-        </tr>
-      </thead>
-    
-      <tbody>
-        <tr *ngFor="let usuario of usuarios" >
-          <td>{{usuario.id}}</td>
-          <td>{{usuario.cnpj}}</td>
-          <td>{{usuario.razaosocial}}</td>
-          <td><a [routerLink]="['/perfil', usuario.id]">Editar</a></td>
-        </tr>
-      </tbody>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>CNPJ</th>
+        <th>RAZÃO SOCIAL</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.cnpj }}</td>
+        <td>{{ usuario.razaosocial }}</td>
+        <td><a [routerLink]="['/perfil', usuario.id]">Editar</a></td>
+      </tr>
+    </tbody>
+  </table>
 </main>
 
 <app-footer></app-footer>

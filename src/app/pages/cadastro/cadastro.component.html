@@ -1,0 +1,234 @@
+<app-header></app-header>
+
+<main>
+  <form #f="ngForm" (ngSubmit)="cadastrarUsuario(f.value)">
+    <div class="container">
+      <div class="row imgRow">
+        <!-- <section class="col s12 m2 sectionImg">
+          <img
+            class="fotoPerfil"
+            src="assets/img/logo-usuario.png"
+            alt="logo cliente"
+          />
+        </section> -->
+
+        <section class="col s12 m10">
+          <!-- <form action="#"> -->
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <input
+                ngModel
+                name="cnpj"
+                id="clientecnpj"
+                type="text"
+                class="validate"
+                placeholder=" "
+              />
+              <label for="cnpj" class="active">CNPJ</label>
+            </div>
+
+            <div class="input-field col s12 m6">
+              <input
+                ngModel
+                name="razaosocial"
+                id="razaosocial"
+                type="text"
+                class="validate"
+                placeholder=" "
+              />
+              <label for="razaosocial">Razão Social</label>
+            </div>
+
+            <div class="input-field col s12 m6">
+              <input
+                ngModel
+                name="email"
+                id="email"
+                type="email"
+                class="validate"
+                placeholder=" "
+              />
+              <label for="email">E-mail</label>
+            </div>
+
+            <div class="input-field col s12 m6">
+              <input
+                ngModel
+                name="senha"
+                id="senha"
+                type="password"
+                class="validate"
+                placeholder=" "
+              />
+              <label for="senha">Senha</label>
+            </div>
+
+            <div class="input-field col s12 m6">
+              <input
+                ngModel
+                name="telefone"
+                id="telefoneFixo"
+                type="tel"
+                class="validate"
+                placeholder="(##) ####-####"
+              />
+              <label for="telefoneFixo">Telefone Fixo</label>
+            </div>
+
+            <div class="input-field col s12 m6">
+              <input
+                ngModel
+                name="celular"
+                id="telefoneCelular"
+                type="tel"
+                class="validate"
+                placeholder="(##) #####-####"
+              />
+              <label for="telefoneCelular">Telefone Celular</label>
+            </div>
+
+            <div class="input-field col s12 m6">
+              <input
+                ngModel
+                name="cep"
+                id="cep"
+                type="text"
+                class="validate"
+                placeholder="#####-###"
+              />
+              <label for="cep">Cep</label>
+            </div>
+
+            <div class="input-field col s12 m6">
+              <input
+                ngModel
+                name="rua"
+                id="rua"
+                type="text"
+                class="validate"
+                placeholder=" "
+              />
+              <label for="rua">Rua</label>
+            </div>
+
+            <div class="col s12 m6">
+              <div class="row">
+                <div class="input-field col s6 m4">
+                  <input
+                    ngModel
+                    name="numeroendereco"
+                    id="numero"
+                    type="text"
+                    class="validate"
+                    placeholder=" "
+                  />
+                  <label for="numero">Número</label>
+                </div>
+
+                <div class="input-field col s6 m8">
+                  <input
+                    ngModel
+                    name="complementoendereco"
+                    id="complemento"
+                    type="text"
+                    class="validate"
+                    placeholder=" "
+                  />
+                  <label for="complemento">Complemento</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m6">
+              <div class="row">
+                <div class="input-field col s12 m12">
+                  <input
+                    ngModel
+                    name="bairro"
+                    id="bairro"
+                    type="text"
+                    class="validate"
+                    placeholder=" "
+                  />
+                  <label for="bairro">Bairro</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m6">
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <input
+                    ngModel
+                    name="estado"
+                    id="estadoendereco"
+                    name="estadoendereco"
+                    type="text"
+                    class="validate"
+                    placeholder=" "
+                  />
+                  <label for="estadoendereco">UF</label>
+                </div>
+
+                <div class="input-field col s12 m6">
+                  <input
+                    ngModel
+                    name="cidade"
+                    id="cidade"
+                    type="text"
+                    class="validate"
+                    placeholder=" "
+                  />
+                  <label for="cidade">Cidade</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="file-field input-field col s12 m6">
+              <div class="btn blue col s4 m2">
+                <span>File</span>
+                <input type="file" multiple />
+              </div>
+              <div class="file-path-wrapper col s8 m10">
+                <input
+                  class="file-path validate"
+                  type="text"
+                  placeholder="Adicione aqui sua logo"
+                />
+              </div>
+            </div>
+
+            <div class="input-field col s12 m12">
+              <input
+                ngModel
+                name="perfil"
+                type="text"
+                class="validate"
+                placeholder=" Por favor preencha com letra maiúscula: ADM ou USUARIO "
+              />
+              <label for="perfil">Perfil</label>
+            </div>
+          </div>
+
+          <!-- </form> -->
+
+          <div class="col s12 m6 bntPerfil">
+            <a class="waves-effect waves-light btn-small blue darken-4">
+              Cadastrar novo usuário
+            </a>
+          </div>
+
+          <div class="col s12 m6 bntPerfil">
+            <!-- <a
+              (click)="cadastrarUsuario()"
+              class="waves-effect waves-light btn-small blue darken-4"
+            >
+              Salvar alterações
+            </a> -->
+          </div>
+        </section>
+      </div>
+    </div>
+  </form>
+</main>
+<app-footer></app-footer>

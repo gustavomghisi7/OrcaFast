@@ -3,9 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { environment } from 'src/environments/environment';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root'})
 export class UsuariosService {
 
   constructor(private http: HttpClient) { }
@@ -20,5 +18,13 @@ export class UsuariosService {
 
   alterarUsuario(dados:any){
     return this.http.put(`${environment.BASE_URL}/usuarios/${dados.id}`, dados)
+  }
+
+  deletarUsuario(id:number){
+    return this.http.delete(`${environment.BASE_URL}/usuarios/${id}`)
+  }
+
+  cadastrarUsuario(dados:any){
+    return this.http.post(`${environment.BASE_URL}/usuarios/${dados.id}`, dados)
   }
 }

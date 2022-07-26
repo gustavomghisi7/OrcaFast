@@ -13,6 +13,7 @@ import { AdmComponent } from './pages/adm/adm.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CatalogoComponent } from './pages/catalogo/catalogo.component';
     HomeComponent,
     CatalogoComponent,
     PerfilComponent,
-    AdmComponent
+    AdmComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,

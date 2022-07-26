@@ -1,0 +1,72 @@
+.container {
+  margin-top: 35px;
+}
+
+form {
+  padding-top: 30px;
+}
+
+.imgRow {
+  display: flex;
+}
+
+.sectionImg {
+  align-items: stretch;
+}
+
+.fotoPerfil {
+  width: 100px;
+  border-radius: 50%;
+  top: 100px;
+  margin-top: -40px;
+  position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+  .imgRow {
+    display: contents;
+    float: none;
+    justify-content: center;
+  }
+
+  .sectionImg {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fotoPerfil {
+    width: 100px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: 25px;
+    position: relative;
+  }
+}
+
+.input:not([type]),
+input[type="text"]:not(.browser-default),
+input[type="password"]:not(.browser-default),
+input[type="email"]:not(.browser-default),
+input[type="url"]:not(.browser-default),
+input[type="time"]:not(.browser-default),
+input[type="date"]:not(.browser-default),
+input[type="datetime"]:not(.browser-default),
+input[type="datetime-local"]:not(.browser-default),
+input[type="tel"]:not(.browser-default),
+input[type="number"]:not(.browser-default),
+input[type="search"]:not(.browser-default),
+textarea.materialize-textarea {
+  border-bottom: 1px solid var(--azul);
+  color: var(--azul-oscuro) !important;
+  box-shadow: 0 1px 0 0 var(--azul-claro) !important;
+  width: 95%;
+}
+
+.active {
+  color: var(--azul) !important;
+}
+
+.bntPerfil {
+  text-align: center;
+  margin-bottom: 20px;
+}

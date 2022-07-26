@@ -9,14 +9,14 @@ import { UsuariosService } from '../../services/usuarios.service';
 export class AdmComponent implements OnInit {
 
   constructor(private service: UsuariosService) {  }
-  
+
   ngOnInit(): void {
     this.mostrarUsuarios()
   }
 
   usuarios:any = []
   mostrarUsuarios():void{
-    this.service.getUsuarios().subscribe(data => 
+    this.service.getUsuarios().subscribe(data =>
       {
         this.usuarios = data
         console.log(this.usuarios)
@@ -24,4 +24,11 @@ export class AdmComponent implements OnInit {
 
   }
 
+  msg: string= ''
+  deletarUsuario(id:number):void{
+    this.service.deletarUsuario(id).subscribe( () => this.msg = 'Usuario excluído com sucesso'
+    )
+  }
+
 }
+
