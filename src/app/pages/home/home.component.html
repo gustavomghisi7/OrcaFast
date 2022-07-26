@@ -92,22 +92,23 @@
                         <h3 class="h3-indigo">Acessar a Plataforma</h3>
                         <p>Faça seu login e comece a economizar:</p>
     
-                        <form method="post">
+                        <form #f="ngForm" (ngSubmit)="logar(f.value)">
                             <div class="input-field">
                                 <i class="material-icons prefix blue-text">login</i>
-                                <input id="cnpj" type="text" class="validate">
-                                <label for="cnpj">CNPJ</label>
+                                <input id="email" type="email" class="validate" ngModel name="email">
+                                <label for="email">E-mail</label>
                             </div>
                             <div class="input-field">
                                 <i class="material-icons prefix blue-text">password</i>
-                                <input id="senha" type="password" class="validate">
+                                <input id="senha" type="password" class="validate" ngModel name="senha">
                                 <label for="senha">Senha</label>
                             </div>
+                            <button>
+                                ENTRAR
+                            </button>
                         </form>
                         <a href="#" class="col s12 links">Esqueci a senha</a>
-                        <a href="catalogo.html" class="margem waves-effect waves-light btn-small blue ">
-                            ENTRAR
-                        </a>
+                        
                     </div>
                 </div>
     
