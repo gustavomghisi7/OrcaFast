@@ -32,7 +32,7 @@ export class CadastroComponent implements OnInit {
   }
 
   cadastrarUsuario(dados:any):void{
-    this.service.cadastrarUsuario(this.usuario).subscribe(data => {
+       this.service.cadastrarUsuario(dados).subscribe(data => {
       console.log(data)
     })
   }

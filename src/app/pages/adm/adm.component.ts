@@ -19,7 +19,7 @@ export class AdmComponent implements OnInit {
     this.service.getUsuarios().subscribe(data =>
       {
         this.usuarios = data
-        console.log(this.usuarios)
+
       })
 
   }

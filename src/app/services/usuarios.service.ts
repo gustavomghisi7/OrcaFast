@@ -25,6 +25,6 @@ export class UsuariosService {
   }
 
   cadastrarUsuario(dados:any){
-    return this.http.post(`${environment.BASE_URL}/usuarios/${dados.id}`, dados)
+    return this.http.post(`${environment.BASE_URL}/usuarios`, dados)
   }
 }
