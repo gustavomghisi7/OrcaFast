@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <main class="container">
-  <button><a routerLink="/cadastro">Cadastrar novo usuário</a></button>
+  
   <router-outlet></router-outlet>
   <h5>Usuários:</h5>
   <br />
@@ -21,9 +21,11 @@
         <td>{{ usuario.cnpj }}</td>
         <td>{{ usuario.razaosocial }}</td>
         <td><a [routerLink]="['/perfil', usuario.id]">Editar</a></td>
+        <td><a [routerLink]="['/adm']" (click)="deletarUsuario(usuario.id)">Deletar</a></td>
       </tr>
     </tbody>
   </table>
+  <button><a routerLink="/cadastro">Cadastrar novo usuário</a></button>
 </main>
 
 <app-footer></app-footer>
