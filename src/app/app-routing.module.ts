@@ -5,6 +5,7 @@ import { AdmComponent } from './pages/adm/adm.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { AuthGuardAdmService } from './guards/auth-guard-adm.service';
 
 const routes: Routes = [
   {
@@ -25,11 +26,13 @@ const routes: Routes = [
   },
   {
     path: 'adm',
-    component: AdmComponent
+    component: AdmComponent,
+    canActivate: [AuthGuardAdmService]
   },
   {
     path: 'cadastro',
-    component: CadastroComponent
+    component: CadastroComponent,
+    canActivate: [AuthGuardAdmService]
   }
 ];
 

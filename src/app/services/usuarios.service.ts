@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import jwt_decode from "jwt-decode"
 
 import { environment } from 'src/environments/environment';
 
@@ -30,5 +31,17 @@ export class UsuariosService {
 
   logar(dados:any){
     return this.http.post(`${environment.BASE_URL}/usuarios/login`, dados)
+  }
+
+  getDadosToken(){
+
+    var token = localStorage.getItem('usertoken') || ''
+    if(token !== ''){
+      var bodyToken = jwt_decode(token)
+      var tokenJson= JSON.stringify(bodyToken)
+      var tokenDecodificado = JSON.parse(tokenJson)
+      return tokenDecodificado
+    }
+    return ''
   }
 }
