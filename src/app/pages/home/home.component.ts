@@ -19,22 +19,17 @@ export class HomeComponent implements OnInit{
   logar(dados:any){
     //console.log(dados)
     this.service.logar(dados).subscribe(data => {
-      //console.log(data)
       let token = JSON.stringify(data)
       let x = JSON.parse(token)
       localStorage.setItem('usertoken', x.token)
-      //window.location.reload()
       
 
       
       var user = this.service.getDadosToken()
-      console.log(`usuário: ${user}`)
       if (user.perfil == 'ADM') {
-        console.log('adm')
         this.router.navigate(['/adm'])
       } else if (user.perfil == 'USUARIO'){
-        console.log('usuario')
-        this.router.navigate(['/perfil'])
+        this.router.navigate([`/perfil/${user.id}`])
       }
     })
     
