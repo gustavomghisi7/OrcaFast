@@ -8,22 +8,10 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, CanActivate {
+export class HomeComponent implements OnInit{
 
-  constructor( private service: UsuariosService) { }
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    var user = this.service.getDadosToken()
-      if (user.perfil == 'ADM') {
-        console.log('adm')
-        return true
-        //this.router.navigate(['/adm'])
-      } else if (user.perfil == 'USUARIO'){
-        console.log('usuario')
-        return true
-        //this.router.navigate(['/perfil'])
-      }
-      return false
-  }
+  constructor( private service: UsuariosService, private router:Router ) { }
+ 
 
   ngOnInit(): void {
   }
@@ -34,8 +22,20 @@ export class HomeComponent implements OnInit, CanActivate {
       //console.log(data)
       let token = JSON.stringify(data)
       let x = JSON.parse(token)
-      localStorage.setItem('token', x.token)
-      window.location.reload()
+      localStorage.setItem('usertoken', x.token)
+      //window.location.reload()
+      
+
+      
+      var user = this.service.getDadosToken()
+      console.log(`usuário: ${user}`)
+      if (user.perfil == 'ADM') {
+        console.log('adm')
+        this.router.navigate(['/adm'])
+      } else if (user.perfil == 'USUARIO'){
+        console.log('usuario')
+        this.router.navigate(['/perfil'])
+      }
     })
     
   }
