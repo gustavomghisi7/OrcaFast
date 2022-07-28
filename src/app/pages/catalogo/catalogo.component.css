@@ -1,0 +1,125 @@
+/*  botões  */
+.btnOrcar {
+    margin-bottom: 25px;
+    margin-left: 37%
+  }
+  
+  
+  /* estilos inpust file e buscar*/
+  .input-field>label {
+    color: #9e9e9e7e;
+  }
+  
+  textarea.materialize-textarea:focus:not([readonly]),
+  input.valid[type=text]:not(.browser-default),
+  input[type=text]:not(.browser-default),
+  textarea.materialize-textarea {
+    color: var(--azul-oscuro) !important;
+    box-shadow: 0 1px 0 0 var(--azul-claro);
+    width: 95%;
+  }
+  
+  .active {
+    color: var(--azul) !important;
+  }
+  
+  .planilha {
+    margin-top: -5%;
+    font-size: smaller;
+    cursor: pointer;
+    text-decoration-line: underline;
+    margin-left: 17%;
+  }
+  
+  .planilha:hover {
+    font-size: smaller;
+    text-decoration-line: underline;
+    color: var(--azul-claro);
+    cursor: pointer;
+  }
+  
+  /* fim estilos input buscar */
+  
+  /* inicio cards */
+  .card {
+    border-radius: 8px !important;
+  }
+  
+  .card.horizontal {
+    min-height: 250px;
+    font-size: small;
+    border-radius: 2px 0 0 2px;
+    max-width: 100%;
+    width: 100%;
+    padding-left: 3px;
+    display: flex;
+  
+  }
+  
+  .card.horizontal:hover {
+    max-width: 110%;
+    width: 102%;
+    transition: 0.3s;
+  }
+  
+  .card-image img {
+    cursor: pointer;
+    padding-top: 20%;
+    height: 90%;
+  }
+  
+  .card .card-action {
+    padding: 2%;
+    text-decoration-line: underline;
+  }
+  
+  /* alteração cor checkBox */
+  [type="checkbox"]:checked+span:not(.lever):before {
+    border-right: 2px solid var(--azul);
+    border-bottom: 2px solid var(--azul);
+  }
+  
+  /* alteração cor inputs card*/
+  input[type=number]:not(.browser-default):focus:not([readonly]),
+  input[type=number]:not(.browser-default) {
+    border-bottom: 1px solid var(--azul);
+    box-shadow: 0 0.5px 0 0 var(--azul-claro);
+    width: 45%;
+  }
+  
+  /* fim cards */
+  
+  /* container de itens selecionados */
+  .chip {
+    background-color: rgba(78, 177, 230, 0.116);
+    color: var(--azul-oscuro);
+  }
+  
+  .chip:hover {
+    background-color: rgba(4, 167, 254, 0.189);
+    transition: 1.0s;
+    color: var(--indigo-oscuro);
+  }
+  
+  /* fim main */
+  
+  /* responsividade mobile  */
+  @media only screen and (max-width: 600px) {
+    .btnOrcar {
+      margin-left: 20.5%
+    }
+  
+    .logo-nav {
+      margin-left: 0px !important;
+      margin-right: 0px;
+    }
+  
+    .planilha {
+      margin-left: 21%;
+    }
+  
+    .tituloCatalogo {
+      font-size: 20px;
+    }
+  
+  }

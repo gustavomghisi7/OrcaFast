@@ -6,7 +6,7 @@
       "produto": "Cimento",
       "descricao": "Cimento 50kg concreto convencional",
       "marca": "Votoran",
-      "imagem": "https://imgur.com/qxwXSSK"
+      "imagem": "./assets/upload-catalogo/cimento-votoram.PNG"
     },
     { 
       "id":2,
@@ -14,7 +14,7 @@
       "produto": "Cimento",
       "descricao": "Cimento 50kg uso geral reboco concreto",
       "marca": "Cauê",
-      "imagem":"https://drive.google.com/file/d/1JQEFqF8CoKnliWUx1y3JChwXDNyWsKZd/view?usp=sharing"
+      "imagem":"./assets/upload-catalogo/cimento-caue.PNG"
     },
     { 
       "id":3,
@@ -22,7 +22,7 @@
       "produto": "Tela amarração",
       "descricao": "Tela 10,5cm X 50cm Amarração para Alvenaria",
       "marca": "Vonder",
-      "imagem":"https://drive.google.com/file/d/1X_N-d1q7Ot-oaueuiNHbSVLLupVLlGJc/view?usp=sharing"
+      "imagem":"./assets/upload-catalogo/tela-alambrado.PNG"
     },
 
     { 
@@ -31,7 +31,7 @@
       "produto": "Tela preta",
       "descricao": "Tela 1,00x50mt plastico preta galinheiro",
       "marca": "Cassol",
-      "imagem":"https://drive.google.com/file/d/1SdZPn73NDPs9G9_KC9nLaBJ3i1ZtEYNY/view?usp=sharing"
+      "imagem":"./assets/upload-catalogo/tela-plastico.PNG"
 
     },
     { 
@@ -40,7 +40,7 @@
       "produto": "Telha cerâmica",
       "descricao": "Telha 88x242cm PVC-Plan Cerâmica",
       "marca": "Tubozan",
-      "imagem":"https://drive.google.com/file/d/1mIi2LiKvSiGkHxe01FmDGMQ6C7BZ956U/view?usp=sharing"
+      "imagem":"./assets/upload-catalogo/telha-a.PNG"
     },
     { 
       "id":6,
@@ -48,7 +48,7 @@
       "produto": "Telha fibra",
       "descricao": "Telha 95x200cm Fibra Vegetal Ondulada",
       "marca": "Onduline",
-      "imagem":"https://drive.google.com/file/d/1w689g_MK3NJSXmOfrdpON3dXlKUdtc2P/view?usp=sharing"
+      "imagem": "./assets/upload-catalogo/telha-vegetal.PNG"
     },
     { 
       "id":7,
@@ -56,7 +56,7 @@
       "produto": "Tijolo cerâmicos",
       "descricao": "Tijolo 9x14x19cm Cerâmico 6 Furos",
       "marca": "Cepazzi",
-      "imagem":"https://drive.google.com/file/d/1gtEUHYo6HcdTxhzkIXo31pn7mkWHhGwJ/view?usp=sharing"
+      "imagem":"./assets/upload-catalogo/tijolo-laranja.PNG"
     },
     { 
       "id":8,
@@ -64,7 +64,7 @@
       "produto": "Tijolo refratário",
       "descricao": "Tijolo 9x11x2cm Refratário churrasqueria",
       "marca": "Gabriella",
-      "imagem":"https://drive.google.com/file/d/11RzrNGyzhbbcp_UzeyHp1o6JYW0y0Smg/view?usp=sharing"
+      "imagem": "./assets/upload-catalogo/tijolo-refratario.PNG"
     },
     { 
       "id":8,
@@ -72,7 +72,7 @@
       "produto": "Tijolo de Vidro",
       "descricao": "Tijolo 9x11x2cm Vidro trasluzido decor",
       "marca": "Vitraltect",
-      "imagem":"https://drive.google.com/file/d/11RzrNGyzhbbcp_UzeyHp1o6JYW0y0Smg/view?usp=sharing"
+      "imagem":"./assets/upload-catalogo/tijolo-vidro.PNG"
     }
   ],
   "comments": [
