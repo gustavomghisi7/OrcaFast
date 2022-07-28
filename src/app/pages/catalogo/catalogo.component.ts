@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { ProdutosService } from 'src/app/produtos.service';
 
 @Component({
@@ -8,18 +9,22 @@ import { ProdutosService } from 'src/app/produtos.service';
 })
 export class CatalogoComponent implements OnInit {
 
-  produtos: any =[]
+  produtos: any = []
 
-  constructor(private service:ProdutosService) { }
+  constructor(private service: ProdutosService) { }
+
+  inscricaoGetProdutos: any = Subscription;
 
   ngOnInit(): void {
     this.pegarTodosOsProdutos()
   }
-  
-  pegarTodosOsProdutos():void{
-    this.service.getProdutos()
-    .subscribe(data => this.produtos = data)
+
+  pegarTodosOsProdutos(): void {
+    this.inscricaoGetProdutos = this.service.getProdutos()
+      .subscribe(data => this.produtos = data)
+  }
+  ngOnDestroy(): void{
+    this.inscricaoGetProdutos.unsubscribe;
   }
 
-  
 }

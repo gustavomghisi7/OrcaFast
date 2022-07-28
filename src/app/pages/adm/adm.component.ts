@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { UsuariosService } from '../../services/usuarios.service';
 
 @Component({
@@ -10,13 +11,18 @@ export class AdmComponent implements OnInit {
 
   constructor(private service: UsuariosService) { }
 
+  inscricaoGet: any = Subscription;
+  inscricaoDelet: any = Subscription;
+
+
+
   ngOnInit(): void {
     this.mostrarUsuarios()
   }
 
   usuarios: any = []
   mostrarUsuarios(): void {
-    this.service.getUsuarios().subscribe(data => {
+    this.inscricaoGet = this.service.getUsuarios().subscribe(data => {
       this.usuarios = data
 
     })
@@ -26,10 +32,15 @@ export class AdmComponent implements OnInit {
   msg: string = ''
   deletarUsuario(id: number): void {
     console.log('tentou deletar')
-    this.service.deletarUsuario(id).subscribe(() => {
+    this.inscricaoDelet =this.service.deletarUsuario(id).subscribe(() => {
       this.msg = 'Usuario excluído com sucesso',
       window.location.reload()
     })
+  }
+
+  ngOnDestroy(): void{
+    this.inscricaoDelet.unsubscribe;
+    this.inscricaoGet.unsubscribe;
   }
 
 }
