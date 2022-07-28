@@ -1,6 +1,7 @@
 import { UsuariosService } from './../../services/usuarios.service';
 import { Component, OnInit } from '@angular/core';
 
+declare const M: any
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
@@ -26,15 +27,18 @@ export class CadastroComponent implements OnInit {
   logo: string = ''
   perfil: string = ''
 
+
   constructor(private service: UsuariosService) { }
+  msg: string = 'Usuário cadastrado com sucesso'
 
   ngOnInit(): void {
+    M.updateTextFields()
   }
 
-  cadastrarUsuario(dados:any):void{
-       this.service.cadastrarUsuario(dados).subscribe(data => {
-      console.log(data)
-    })
+  cadastrarUsuario(dados: any): void {
+    this.service.cadastrarUsuario(dados).subscribe(data => M.toast 
+       ({ html: this.msg, classes: 'rounded green' }))
   }
-
 }
+
+
