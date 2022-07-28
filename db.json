@@ -1,89 +1,78 @@
 {
-  "usuarios": [
-    {
-      "id": 1,
-      "razaoSocial": "MM Construtora",
-      "cnpj": "12.128.319/1111-99",
-      "email": "mmconstrutora@gmail",
-      "senha": "12345",
-      "telefone": "(48) 111-233",
-      "celular": "(48) 9 111-698",
-      "cep": "80030-156",
-      "rua": "Almirantes",
-      "numeroEndereco": "321",
-      "complementoEndereco": "quadra 26",
-      "bairro": "Rio Tavares",
-      "estado": "2",
-      "cidade": "Florianópolis",
-      "logoUsuario": "imagem logo usuario"
+  "produtos": [
+    { 
+      "id":1,
+      "codigo": 34563,
+      "produto": "Cimento",
+      "descricao": "Cimento 50kg concreto convencional",
+      "marca": "Votoran",
+      "imagem": "https://imgur.com/qxwXSSK"
     },
-    {
-      "id": 4,
-      "razaoSocial": "Isabella e Raimunda Construtora Ltda",
-      "cnpj": "52.128.319/0001-09",
-      "email": "administracao@raimundaltda.com.br",
-      "senha": "74930",
-      "telefone": "(19) 2922-1173",
-      "celular": "(19) 99411-1810",
-      "cep": "80030-156",
-      "rua": "Rua Cinco",
-      "numeroEndereco": 131,
-      "complementoEndereco": "quadra 19",
-      "bairro": "Vila Chico Amaral",
-      "estado": "SP",
-      "cidade": "Campinas",
-      "logoUsuario": "imagem logo usuario"
+    { 
+      "id":2,
+      "codigo": 56463,
+      "produto": "Cimento",
+      "descricao": "Cimento 50kg uso geral reboco concreto",
+      "marca": "Cauê",
+      "imagem":"https://drive.google.com/file/d/1JQEFqF8CoKnliWUx1y3JChwXDNyWsKZd/view?usp=sharing"
     },
-    {
-      "id": 2,
-      "razaoSocial": "Juliana e Rafael Constrtora ME",
-      "cnpj": "36.518.219/0001-24",
-      "email": "atendimento@julianaerafaelme.com.br",
-      "senha": "123456",
-      "telefone": "(67) 2979-4394",
-      "celular": "(67) 98334-6012",
-      "cep": "79826-400",
-      "rua": "Rua Áustria",
-      "numeroEndereco": 199,
-      "complementoEndereco": "quadra 23",
-      "bairro": "Alto das Paineiras",
-      "estado": "MS",
-      "cidade": "Dourados",
-      "logoUsuario": "imagem logo usuario"
+    { 
+      "id":3,
+      "codigo": 53363,
+      "produto": "Tela amarração",
+      "descricao": "Tela 10,5cm X 50cm Amarração para Alvenaria",
+      "marca": "Vonder",
+      "imagem":"https://drive.google.com/file/d/1X_N-d1q7Ot-oaueuiNHbSVLLupVLlGJc/view?usp=sharing"
     },
-    {
-      "id": 5,
-      "razaoSocial": "Simone e Maria Construção Ltda",
-      "cnpj": "11.054.911/0001-18",
-      "email": "cobranca@simoneemarialtda.com.br",
-      "senha": "123456",
-      "telefone": "(83) 2939-2840",
-      "celular": "(83) 98643-7952",
-      "cep": "58081-280",
-      "rua": "Rua Evandyl Pessoa",
-      "numeroEndereco": 642,
-      "complementoEndereco": "quadra 12",
-      "bairro": "Costa e Silve",
-      "estado": "PB",
-      "cidade": "João Pessoa",
-      "logoUsuario": "imagem logo usuario"
+
+    { 
+      "id":4,
+      "codigo": 29363,
+      "produto": "Tela preta",
+      "descricao": "Tela 1,00x50mt plastico preta galinheiro",
+      "marca": "Cassol",
+      "imagem":"https://drive.google.com/file/d/1SdZPn73NDPs9G9_KC9nLaBJ3i1ZtEYNY/view?usp=sharing"
+
     },
-    {
-      "id": 3,
-      "razaoSocial": "Kevin e Camila Construtora Ltda",
-      "cnpj": "17.439.317/0001-21",
-      "email": "tesouraria@kevinecamilaltda.com.br",
-      "senha": "123456",
-      "telefone": "(81) 3864-4086",
-      "celular": "(81) 99221-8364",
-      "cep": "52010-050",
-      "rua": "Rua Epaminondas de Melo",
-      "numeroEndereco": 500,
-      "complementoEndereco": "quadra 27",
-      "bairro": "Paissandu",
-      "estado": "PE",
-      "cidade": "Recife",
-      "logoUsuario": "imagem logo usuario"
+    { 
+      "id":5,
+      "codigo": 11163,
+      "produto": "Telha cerâmica",
+      "descricao": "Telha 88x242cm PVC-Plan Cerâmica",
+      "marca": "Tubozan",
+      "imagem":"https://drive.google.com/file/d/1mIi2LiKvSiGkHxe01FmDGMQ6C7BZ956U/view?usp=sharing"
+    },
+    { 
+      "id":6,
+      "codigo": 99169,
+      "produto": "Telha fibra",
+      "descricao": "Telha 95x200cm Fibra Vegetal Ondulada",
+      "marca": "Onduline",
+      "imagem":"https://drive.google.com/file/d/1w689g_MK3NJSXmOfrdpON3dXlKUdtc2P/view?usp=sharing"
+    },
+    { 
+      "id":7,
+      "codigo": 22169,
+      "produto": "Tijolo cerâmicos",
+      "descricao": "Tijolo 9x14x19cm Cerâmico 6 Furos",
+      "marca": "Cepazzi",
+      "imagem":"https://drive.google.com/file/d/1gtEUHYo6HcdTxhzkIXo31pn7mkWHhGwJ/view?usp=sharing"
+    },
+    { 
+      "id":8,
+      "codigo": 22169,
+      "produto": "Tijolo refratário",
+      "descricao": "Tijolo 9x11x2cm Refratário churrasqueria",
+      "marca": "Gabriella",
+      "imagem":"https://drive.google.com/file/d/11RzrNGyzhbbcp_UzeyHp1o6JYW0y0Smg/view?usp=sharing"
+    },
+    { 
+      "id":8,
+      "codigo": 22169,
+      "produto": "Tijolo de Vidro",
+      "descricao": "Tijolo 9x11x2cm Vidro trasluzido decor",
+      "marca": "Vitraltect",
+      "imagem":"https://drive.google.com/file/d/11RzrNGyzhbbcp_UzeyHp1o6JYW0y0Smg/view?usp=sharing"
     }
   ],
   "comments": [
