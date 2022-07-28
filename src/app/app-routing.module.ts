@@ -14,7 +14,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'catalogo',
+    path: 'catalogo/:idusuario',
     component: CatalogoComponent
   },
   {
