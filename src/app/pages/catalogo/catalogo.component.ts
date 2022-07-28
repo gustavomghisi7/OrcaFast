@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProdutosService } from 'src/app/produtos.service';
+import { ProdutosService } from 'src/app/services/produtos.service';
 
 @Component({
   selector: 'app-catalogo',
@@ -8,7 +8,7 @@ import { ProdutosService } from 'src/app/produtos.service';
 })
 export class CatalogoComponent implements OnInit {
 
-  produtos: any =[]
+  produtos: any = []
 
   constructor(private service:ProdutosService) { }
 
@@ -16,10 +16,9 @@ export class CatalogoComponent implements OnInit {
     this.pegarTodosOsProdutos()
   }
   
-  pegarTodosOsProdutos():void{
+  pegarTodosOsProdutos(): void {
     this.service.getProdutos()
     .subscribe(data => this.produtos = data)
   }
 
-  
 }
