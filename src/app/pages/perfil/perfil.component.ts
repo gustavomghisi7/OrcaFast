@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+
 import { UsuariosService } from '../../services/usuarios.service';
 
 declare const M: any
@@ -11,7 +12,6 @@ declare const M: any
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
-
   idUsuario: number = 0
   usuario: any = {}
   razaosocial: string = ''
@@ -34,23 +34,21 @@ export class PerfilComponent implements OnInit {
 
   inscricaoGetUmUsuario: any = Subscription;
   inscricaoAlterarUsuario: any = Subscription;
-
   
   ngOnInit(): void {
     M.updateTextFields()
 
     M.AutoInit()
-   const routeParams = this.route.snapshot.paramMap;
-   this.idUsuario = Number(routeParams.get('idusuario'))
-   this.inscricaoGetUmUsuario = this.service.getUmUsuario(this.idUsuario).subscribe(data => {
-    this.usuario = data
-    console.log(this.usuario)
-   })}
+    const routeParams = this.route.snapshot.paramMap;
 
+    this.idUsuario = Number(routeParams.get('idusuario'))
+    this.inscricaoGetUmUsuario = this.service.getUmUsuario(this.idUsuario).subscribe(data => {
+    this.usuario = data
+  })}
 
   msg: string = "Usuário alterado"
 
-  salvarAlteracoes(): void{
+  salvarAlteracoes(): void {
     this.inscricaoAlterarUsuario = this.service.alterarUsuario(this.usuario).subscribe(data => M.toast
     (
       { html: this.msg, classes: 'rounded green' }
@@ -60,6 +58,6 @@ export class PerfilComponent implements OnInit {
   ngOnDestroy(): void{
     this.inscricaoGetUmUsuario.unsubscribe;
     this.inscricaoAlterarUsuario.unsubscribe;
-
   }
+  
 }

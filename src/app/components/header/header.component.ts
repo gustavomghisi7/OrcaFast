@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { UsuariosService } from '../../services/usuarios.service';
 
@@ -7,12 +7,9 @@ import { UsuariosService } from '../../services/usuarios.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   constructor(private usuarioService: UsuariosService) { }
-
-  ngOnInit(): void {
-  }
 
   userLogado: any = this.usuarioService.getDadosToken()
 

@@ -1,13 +1,11 @@
 <app-header></app-header>
 <main>
     <div class="container" style="padding-top: 5%;">
-
       <div class="row zerarMargem bg-azul">
         <h3 class="tituloCatalogo h3-azul-oscuro" style="margin-left:5%;">Selecione os produtos que deseja orçar</h3>
       </div>
 
       <div class="row">
-        <!-- inicio inputs file e buscar -->
         <div class="col s12 m6">
           <form action="#">
             <div class="file-field input-field">
@@ -34,12 +32,9 @@
             </div>
           </form>
         </div>
-        <!-- Fim inputs file e buscar -->
       </div>
 
       <div class="row">
-        <!-- inicio cards-->
-        
         <div class="col s12 m4" *ngFor="let prod of produtos">
           <div class="card horizontal">
             <div class="card-image">
@@ -47,9 +42,9 @@
             </div>
             <div class="card-stacked">
               <div class="card-content">
-                <p>{{prod.codigo}}</p>
-                <p>{{prod.descricao}}</p>
-                <p>{{prod.marca}}</p>
+                <p>{{ prod.codigo }}</p>
+                <p>{{ prod.descricao }}</p>
+                <p>{{ prod.marca }}</p>
                 <p class="card-action">
                   <label>
                     <input type="checkbox" />
@@ -61,14 +56,11 @@
             </div>
           </div>
         </div>
-
-        <!-- fim das card-->
       </div>
+
       <div class="row">
-        <!-- inicio carrinho seleição  -->
         <div class="col s12">
           <ul class="collapsible">
-
             <li>
               <div class="collapsible-header blue-text">
                 <i class="material-icons">check_circle</i>Itens selecionados
@@ -99,18 +91,15 @@
                   Tijolo Vitraltec
                   <i class="close material-icons">close</i>
                 </div>
-
               </div>
             </li>
           </ul>
         </div>
-        <!-- fim carrinho seleição  -->
       </div>
-      <!-- botão orçamento  -->
-      <a class=" btnOrcar waves-effect waves-light btn-small  blue darken-4"><i
-          class="material-icons right">file_download</i>Solicitar orçamento</a>
-
+      <a class=" btnOrcar waves-effect waves-light btn-small  blue darken-4">
+        <i class="material-icons right">file_download</i>
+        Solicitar orçamento
+      </a>
     </div>
   </main>
-  <script src="./catalogo.js"></script>
 <app-footer></app-footer>

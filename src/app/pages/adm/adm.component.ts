@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+
 import { UsuariosService } from '../../services/usuarios.service';
 
 @Component({
@@ -22,14 +23,11 @@ export class AdmComponent implements OnInit {
   mostrarUsuarios(): void {
     this.inscricaoGet = this.service.getUsuarios().subscribe(data => {
       this.usuarios = data
-
     })
-
   }
 
   msg: string = ''
   deletarUsuario(id: number): void {
-    console.log('tentou deletar')
     this.inscricaoDelet =this.service.deletarUsuario(id).subscribe(() => {
       this.msg = 'Usuario excluído com sucesso',
       window.location.reload()
@@ -40,6 +38,4 @@ export class AdmComponent implements OnInit {
     this.inscricaoDelet.unsubscribe;
     this.inscricaoGet.unsubscribe;
   }
-
 }
-

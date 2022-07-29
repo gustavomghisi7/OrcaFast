@@ -9,39 +9,40 @@ export class UsuariosService {
 
   constructor(private http: HttpClient) { }
 
-  getUsuarios(){
+  getUsuarios() {
     return this.http.get(`${environment.BASE_URL}/usuarios`)
   }
 
-  getUmUsuario(id:number){
+  getUmUsuario(id: number) {
     return this.http.get(`${environment.BASE_URL}/usuarios/${id}`)
   }
 
-  alterarUsuario(dados:any){
+  alterarUsuario(dados: any) {
     return this.http.put(`${environment.BASE_URL}/usuarios/${dados.id}`, dados)
   }
 
-  deletarUsuario(id:number){
+  deletarUsuario(id: number) {
     return this.http.delete(`${environment.BASE_URL}/usuarios/${id}`)
   }
 
-  cadastrarUsuario(dados:any){
+  cadastrarUsuario(dados: any) {
     return this.http.post(`${environment.BASE_URL}/usuarios`, dados)
   }
 
-  logar(dados:any){
+  logar(dados: any) {
     return this.http.post(`${environment.BASE_URL}/usuarios/login`, dados)
   }
 
-  getDadosToken(){
-
+  getDadosToken() {
     var token = localStorage.getItem('usertoken') || ''
+
     if(token !== ''){
       var bodyToken = jwt_decode(token)
       var tokenJson= JSON.stringify(bodyToken)
       var tokenDecodificado = JSON.parse(tokenJson)
       return tokenDecodificado
     }
+    
     return ''
   }
 }

@@ -1,16 +1,16 @@
-import { UsuariosService } from './../../services/usuarios.service';
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
+import { UsuariosService } from './../../services/usuarios.service';
 
 declare const M: any
+
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent implements OnInit {
-
   idUsuario: number = 0
   usuario: any = {}
   razaosocial: string = ''
@@ -29,12 +29,11 @@ export class CadastroComponent implements OnInit {
   logo: string = ''
   perfil: string = ''
 
-
   constructor(private service: UsuariosService) { }
+
   msg: string = 'Usuário cadastrado com sucesso'
 
   inscricaoCadastrar: any = Subscription;
-  
 
   ngOnInit(): void {
     M.updateTextFields()
@@ -42,7 +41,7 @@ export class CadastroComponent implements OnInit {
 
   cadastrarUsuario(dados: any): void {
     this.inscricaoCadastrar =this.service.cadastrarUsuario(dados).subscribe(data => M.toast 
-       ({ html: this.msg, classes: 'rounded green' }))
+    ({ html: this.msg, classes: 'rounded green' }))
   }
 
   ngOnDestroy(): void{

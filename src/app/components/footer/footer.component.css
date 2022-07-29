@@ -3,7 +3,7 @@
   padding-top: 1%;
 }
   
-.dropdown-content li>a, .dropdown-content li>span {
+.dropdown-content li > a, .dropdown-content li > span {
   color:var(--azul-oscuro);  
 }
   

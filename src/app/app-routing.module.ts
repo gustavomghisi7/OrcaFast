@@ -1,10 +1,12 @@
-import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AdmComponent } from './pages/adm/adm.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
+
 import { AuthGuardAdmService } from './guards/auth-guard-adm.service';
 import { AuthGuardUserService } from './guards/auth-guard-user.service';
 
