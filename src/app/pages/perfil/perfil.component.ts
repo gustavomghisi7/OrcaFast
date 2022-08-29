@@ -59,5 +59,6 @@ export class PerfilComponent implements OnInit {
     this.inscricaoGetUmUsuario.unsubscribe;
     this.inscricaoAlterarUsuario.unsubscribe;
   }
+
   
 }
