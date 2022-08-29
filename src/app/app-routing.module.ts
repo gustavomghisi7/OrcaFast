@@ -37,7 +37,13 @@ const routes: Routes = [
     path: 'cadastro',
     component: CadastroComponent,
     canActivate: [AuthGuardAdmService]
+  },
+  {
+    path: 'catalogo/:idusuario',
+    component: CatalogoComponent,
+    canActivate: [AuthGuardUserService]
   }
+  
 ];
 
 @NgModule({

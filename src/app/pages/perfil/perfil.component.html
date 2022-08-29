@@ -5,8 +5,7 @@
     <div class="row imgRow">
       <section class="col s12 m2 sectionImg">
         <img src="../../../assets/upload-perfil/1.png" width="100px">
-      </section>
-
+      </section>    
       <section class="col s12 m10">
         <div class="row">
           <div class="input-field col s12 m6">
@@ -188,6 +187,14 @@
             class="waves-effect waves-light btn-small blue darken-4"
           >
             Salvar alterações
+          </a>
+        </div>
+        <div>
+          <a 
+          [routerLink]="['/catalogo', usuario.id]"
+          class="waves-effect waves-light btn-small blue darken-4"
+          >
+          Acessar o catálogo
           </a>
         </div>
       </section>
