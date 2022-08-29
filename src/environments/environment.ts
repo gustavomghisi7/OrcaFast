@@ -5,6 +5,13 @@
 export const environment = {
   production: false,
   BASE_URL: 'https://orcafast.herokuapp.com'
+
+};
+
+export const environmentJava = {
+  production: false,
+  BASE_URL_JAVA: 'https://orcafast-api-java.herokuapp.com/'
+
 };
 
 /*
