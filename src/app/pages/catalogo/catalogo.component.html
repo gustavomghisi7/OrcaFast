@@ -48,7 +48,7 @@
                 <p>{{ prod.categoria.descricaoc}}</p>
                 <p class="card-action">
                   <label>
-                    <input type="checkbox" />
+                    <input type="checkbox" name="checkbox" (click)="selecionarItem(prod)"/>
                     <span class="blue-text">Selecionar</span>
                     <input type="number" name="quantidade" id="quantidade" placeholder="0">
                   </label>
@@ -63,6 +63,72 @@
         <i class="material-icons right">file_download</i>
         Solicitar orçamento
       </a>
+
+      <main class="container">
+        <router-outlet></router-outlet>
+      <div class="row">
+        <table>
+          <thead>
+            <tr>
+              <th>CÓDIGO</th>
+              <th>NOME PRODUTO</th>
+              <th>QUANTIDADE</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr *ngFor="let item of listaSelecao">
+              <td>{{item.id}}</td>
+              <td>{{item.descricaop}}</td>
+              <td>{{item.quantidade}}</td>
+              <td><button>Remover da lista</button></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+  
+      </div>
+    </main>
     </div>
   </main>
+
+  <!-- <p>Itens selecionados:</p>
+<div class="row">
+    <div class="col s12">
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header blue-text">
+            <i class="material-icons">check_circle</i>Itens selecionados
+          </div>
+          <div class="collapsible-body">
+            <div class="chip">
+              <img src="upload-catalogo/cimento-votoram.PNG" alt="">
+              Cimento Votoran
+              <i class="close material-icons">close</i>
+            </div>
+            <div class="chip">
+              <img src="upload-catalogo/cimento-caue.PNG" alt="">
+              Cimento Caué
+              <i class="close material-icons">close</i>
+            </div>
+            <div class="chip">
+              <img src="upload-catalogo/tela-arame1.PNG" alt="">
+              Tela Amarração
+              <i class="close material-icons">close</i>
+            </div>
+            <div class="chip">
+              <img src="upload-catalogo/tijolo-laranja.PNG" alt="">
+              Tijolo Cepazzi
+              <i class="close material-icons">close</i>
+            </div>
+            <div class="chip">
+              <img src="upload-catalogo/tijolo-vidro.PNG" alt="">
+              Tijolo Vitraltec
+              <i class="close material-icons">close</i>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div> -->
 <app-footer></app-footer>
