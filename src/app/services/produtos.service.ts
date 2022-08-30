@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environmentJava } from 'src/environments/environment';
+import { environment, environmentJava } from 'src/environments/environment';
 
 
 @Injectable({
@@ -12,5 +12,9 @@ export class ProdutosService {
 
   getProdutos() {
     return this.http.get((`${environmentJava.BASE_URL_JAVA}/produtos`))
+  }
+
+  salvarSelecao(dados:any){
+    return this.http.post(`${environmentJava.BASE_URL_JAVA}/selecao`, dados)
   }
 }
