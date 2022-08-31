@@ -17,4 +17,8 @@ export class ProdutosService {
   salvarSelecao(dados:any){
     return this.http.post(`${environmentJava.BASE_URL_JAVA}/selecao`, dados)
   }
+  criarOrcamento(dados: any){
+    return this.http.post(`${environmentJava.BASE_URL_JAVA}/orcamento`, dados)
+    
+  }
 }
