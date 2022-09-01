@@ -33,6 +33,33 @@
       Cadastrar Usuário
     </a>
   </div>
+  <br />
+  <h3 class="h3-indigo">Fornecedores</h3>
+  <br />
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>CNPJ</th>
+        <th>RAZÃO SOCIAL</th>
+        <th>E-MAIL</th>
+        <th>CONTATO</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let fornecedor of fornecedor">
+        <td>{{ fornecedor.id }}</td>
+        <td>{{fornecedor.cnpj }}</td>
+        <td>{{fornecedor.razaosocial }}</td>
+        <td>{{ fornecedor.email }}</td>
+        <td>{{ fornecedor.telefone }}</td>
+        <!-- <td><a [routerLink]="['/perfil', fornecedor.id]">Editar</a></td> -->
+        <td><a [routerLink]="['/adm']" (click)="deletarFornecedor(fornecedor.id)">Deletar</a></td>
+      </tr>
+    </tbody>
+  </table>
+<br />
 </main>
 
 <app-footer></app-footer>

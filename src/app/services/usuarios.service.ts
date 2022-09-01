@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import jwt_decode from "jwt-decode"
 
-import { environment } from 'src/environments/environment';
+import { environment, environmentJava  } from 'src/environments/environment';
 
 @Injectable({ providedIn: 'root'})
 export class UsuariosService {
@@ -45,4 +45,13 @@ export class UsuariosService {
     
     return ''
   }
+
+  deletarFornecedor(id: number) {
+    return this.http.delete(`${environmentJava.BASE_URL_JAVA}/fornecedor/${id}`)
+  }
+
+  getFornecedor() {
+    return this.http.get(`${environmentJava.BASE_URL_JAVA}/fornecedor`)
+  }
+
 }

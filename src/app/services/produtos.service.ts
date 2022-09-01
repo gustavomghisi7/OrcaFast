@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment, environmentJava } from 'src/environments/environment';
+import { environmentJava } from 'src/environments/environment';
 
 
 @Injectable({
@@ -21,4 +21,14 @@ export class ProdutosService {
     return this.http.post(`${environmentJava.BASE_URL_JAVA}/orcamento`, dados)
 
   }
+
+  deletarFornecedor(id: number) {
+    return this.http.delete(`${environmentJava.BASE_URL_JAVA}/fornecedor/${id}`)
+  }
+
+  getFornecedor() {
+    return this.http.get(`${environmentJava.BASE_URL_JAVA}/fornecedor`)
+  }
+
+
 }

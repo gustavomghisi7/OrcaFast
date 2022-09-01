@@ -11,12 +11,15 @@ import { UsuariosService } from '../../services/usuarios.service';
 export class AdmComponent implements OnInit {
 
   constructor(private service: UsuariosService) { }
-
+  
   inscricaoGet: any = Subscription;
-  inscricaoDelet: any = Subscription;
+  inscricaoDelet: any = Subscription; 
+  inscricaoGetFornecedor: any = Subscription;
+  inscricaoDeletFornecedor: any = Subscription;
 
   ngOnInit(): void {
     this.mostrarUsuarios()
+    this.mostrarFornecedor()
   }
 
   usuarios: any = []
@@ -34,8 +37,24 @@ export class AdmComponent implements OnInit {
     })
   }
 
+   deletarFornecedor(id: number): void {
+    this.inscricaoDelet =this.service.deletarFornecedor(id).subscribe(() => {
+      this.msg = 'Fornecedor excluído com sucesso',
+      window.location.reload()
+    })
+  }
+
+  fornecedor: any = []
+  mostrarFornecedor(): void {
+    this.inscricaoGetFornecedor = this.service.getFornecedor().subscribe(data => {
+      this.fornecedor = data
+    })
+  }
+
   ngOnDestroy(): void{
     this.inscricaoDelet.unsubscribe;
     this.inscricaoGet.unsubscribe;
+    this.inscricaoDeletFornecedor.unsubscribe;
+    this.inscricaoGetFornecedor.unsubscribe;
   }
 }
