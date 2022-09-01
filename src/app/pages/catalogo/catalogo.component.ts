@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
 export class CatalogoComponent implements OnInit {
   idUsuario: number = 0;
   produtos: any = [];
+  todosProdutos: any = [];
   orcamento: any = {};
 
   listaIdProdutos: any = {};
@@ -50,7 +51,20 @@ export class CatalogoComponent implements OnInit {
   pegarTodosOsProdutos(): void {
     this.inscricaoGetProdutos = this.service
       .getProdutos()
-      .subscribe((data) => (this.produtos = data));
+      .subscribe((data) => {
+        this.produtos = data
+        this.todosProdutos = data
+      }
+    )
+  }
+
+  procurarProdutos(e: Event): void {
+    const target = e.target as HTMLInputElement;
+    const value = target.value.toLowerCase();
+
+    this.produtos = this.todosProdutos.filter((produto: any) => {
+      return produto.descricaop.toLowerCase().includes(value);
+    });
   }
 
   selecionarItem(item: any) {

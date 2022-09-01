@@ -28,7 +28,7 @@
           <div class="search">
             <div class="input-field">
               <i class="material-icons prefix blue-text">search</i>
-              <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+              <input id="icon_prefix2" class="materialize-textarea" type="text" (input)="procurarProdutos($event)">
               <label for="icon_prefix2">Buscar produtos por nome, marca, código...</label>
             </div>
           </div>
