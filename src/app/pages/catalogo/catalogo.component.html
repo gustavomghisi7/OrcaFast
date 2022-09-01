@@ -16,11 +16,7 @@
               <input type="file" multiple />
             </div>
             <div class="file-path-wrapper">
-              <input
-                class="file-path validate upload"
-                type="text"
-                placeholder="Suba sua planilha de orçamento"
-              />
+              <input class="file-path validate upload" type="text" placeholder="Suba sua planilha de orçamento" />
             </div>
           </div>
           <div class="planilha">Baixar planilha modelo para preencher</div>
@@ -32,13 +28,8 @@
           <div class="search">
             <div class="input-field">
               <i class="material-icons prefix blue-text">search</i>
-              <textarea
-                id="icon_prefix2"
-                class="materialize-textarea"
-              ></textarea>
-              <label for="icon_prefix2"
-                >Buscar produtos por nome, marca, código...</label
-              >
+              <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+              <label for="icon_prefix2">Buscar produtos por nome, marca, código...</label>
             </div>
           </div>
         </form>
@@ -61,19 +52,11 @@
               <p>{{ prod.categoria.descricaoc }}</p>
               <p class="card-action">
                 <label>
-                  <input
-                    type="checkbox"
-                    name="checkbox"
-                    (click)="selecionarItem(prod)"
-                  />
+                  <input type="checkbox" name="checkbox" (click)="selecionarItem(prod)" />
                   <span class="blue-text">Selecionar</span>
-                  <input
-                    type="number"
-                    name="quantidade"
-                    id="quantidade"
-                    placeholder="1"
-                    value="1"
-                  />
+                </label>
+                <label>          
+                  <input (input)="alterar($event)" type="number" name="quantidade" id="quantidade" placeholder="1" />
                 </label>
               </p>
             </div>
@@ -98,10 +81,12 @@
             <tr *ngFor="let item of listaSelecao">
               <td>{{ item.id }}</td>
               <td>{{ item.descricaop }}</td>
-              <td>1</td>
+              <td>{{quantidade}}</td>
               <!-- <td>[(item.quantidade)]</td> -->
-              <td><button (click)="selecionarItem(item)" class="btnOrcar waves-effect waves-light btn-small red accent-4"><i class="medium material-icons">delete
-              </i></button></td>
+              <td><button (click)="selecionarItem(item)"
+                  class="btnOrcar waves-effect waves-light btn-small red accent-4"><i
+                    class="medium material-icons">delete
+                  </i></button></td>
               <td></td>
             </tr>
           </tbody>
@@ -109,10 +94,7 @@
       </div>
     </main>
 
-    <a
-      class="btnOrcar waves-effect waves-light btn-small blue darken-4"
-      (click)="criarOrcamento()"
-    >
+    <a class="btnOrcar waves-effect waves-light btn-small blue darken-4" (click)="criarOrcamento()">
       <!-- <i class="material-icons right">file_download</i> -->
       Solicitar orçamento
     </a>

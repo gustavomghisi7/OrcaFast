@@ -16,7 +16,7 @@ export class CatalogoComponent implements OnInit {
   listaIdProdutos: any = {};
   listaSelecao: any = {};
 
-  // quantidade: number = 0;
+  quantidade: any = [];
 
   objetoSelecao: any = {
     orcamento: {
@@ -70,6 +70,8 @@ export class CatalogoComponent implements OnInit {
       this.orcamento = data
       this.salvarSelecao()
     });
+
+    console.log(this.quantidade)
   }
 
   salvarSelecao() {
@@ -89,7 +91,7 @@ export class CatalogoComponent implements OnInit {
           },
           id: this.listaSelecao[i].id,
         },
-        quantidade: 1,
+        quantidade: this.quantidade[i],
       };
 
       this.service.salvarSelecao(this.objetoSelecao).subscribe((data) => {
@@ -99,10 +101,16 @@ export class CatalogoComponent implements OnInit {
     }
   }
 
+  alterar(evento: any): void{
+    this.quantidade.push(evento.target.value)
+   // this.quantidade = evento.target.value
+  }
+
   ngOnDestroy(): void {
     this.inscricaoGetProdutos.unsubscribe;
   }
 }
+
 
 // // pega a quantidade de produtos passada no input
 
