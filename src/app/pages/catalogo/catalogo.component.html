@@ -28,8 +28,15 @@
           <div class="search">
             <div class="input-field">
               <i class="material-icons prefix blue-text">search</i>
-              <input id="icon_prefix2" class="materialize-textarea" type="text" (input)="procurarProdutos($event)">
-              <label for="icon_prefix2">Buscar produtos por nome, marca, código...</label>
+              <input
+                id="icon_prefix2"
+                class="materialize-textarea"
+                type="text"
+                (input)="procurarProdutos($event)"
+              />
+              <label for="icon_prefix2"
+                >Buscar produtos por nome, marca, código...</label
+              >
             </div>
           </div>
         </form>
@@ -56,6 +63,7 @@
                     type="checkbox"
                     name="checkbox"
                     (click)="selecionarItem(prod)"
+                    [checked]="prod.selecionado"
                   />
                   <span class="blue-text">Selecionar</span>
                 </label>
@@ -93,10 +101,14 @@
               <td>{{ item.descricaop }}</td>
               <td>{{ item.quantidade }}</td>
               <!-- <td>[(item.quantidade)]</td> -->
-              <!-- <td><button (click)="selecionarItem(item)"
-                  class="btnOrcar waves-effect waves-light btn-small red accent-4"><i
-                    class="medium material-icons">delete
-                  </i></button></td> -->
+              <td>
+                <button
+                  (click)="selecionarItem(item)"
+                  class="btnOrcar waves-effect waves-light btn-small blue darken-4"
+                >
+                  <i class="medium material-icons">delete </i>
+                </button>
+              </td>
               <td></td>
             </tr>
           </tbody>

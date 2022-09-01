@@ -3,12 +3,17 @@ import { ActivatedRoute } from '@angular/router';
 import { ProdutosService } from 'src/app/services/produtos.service';
 import { Subscription } from 'rxjs';
 
+
+
 @Component({
   selector: 'app-catalogo',
   templateUrl: './catalogo.component.html',
   styleUrls: ['./catalogo.component.css'],
 })
 export class CatalogoComponent implements OnInit {
+
+
+
   idUsuario: number = 0;
   produtos: any = [];
   todosProdutos: any = [];
@@ -37,7 +42,9 @@ export class CatalogoComponent implements OnInit {
   constructor(
     private service: ProdutosService,
     private route: ActivatedRoute
-  ) {}
+
+
+  ) {  }
 
   inscricaoGetProdutos: any = Subscription;
 
@@ -65,8 +72,9 @@ export class CatalogoComponent implements OnInit {
   }
 
   selecionarItem(item: any) {
-    const produto = this.produtos.find((prod: any) => prod.id == item.id);
-    produto.selecionado = !(produto.selecionado || false);
+    // const produto = this.produtos.find((prod: any) => prod.id == item.id);
+    // produto.selecionado = !(produto.selecionado ?? false);
+    item.selecionado = !(item.selecionado || false);
     this.listaSelecao = this.produtos.filter((prod: any) => prod.selecionado);
   }
 
