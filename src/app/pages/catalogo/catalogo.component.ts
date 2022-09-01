@@ -18,6 +18,7 @@ export class CatalogoComponent implements OnInit {
 
   quantidade: any = [];
 
+
   objetoSelecao: any = {
     orcamento: {
       id: 0,
@@ -92,6 +93,9 @@ export class CatalogoComponent implements OnInit {
           id: this.listaSelecao[i].id,
         },
         quantidade: this.quantidade[i],
+        // quantidade: this.listaSelecao[i].Number(
+        //   (<HTMLInputElement>document.getElementById('quantidade')).value
+        // ),
       };
 
       this.service.salvarSelecao(this.objetoSelecao).subscribe((data) => {
