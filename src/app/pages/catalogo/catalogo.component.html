@@ -52,11 +52,21 @@
               <p>{{ prod.categoria.descricaoc }}</p>
               <p class="card-action">
                 <label>
-                  <input type="checkbox" name="checkbox" (click)="selecionarItem(prod)" />
+                  <input
+                    type="checkbox"
+                    name="checkbox"
+                    (click)="selecionarItem(prod)"
+                  />
                   <span class="blue-text">Selecionar</span>
                 </label>
-                <label>          
-                  <input (input)="alterar($event)" type="number" name="quantidade" id="quantidade" placeholder="1" />
+                <label>
+                  <input
+                    [(ngModel)]="prod.quantidade"
+                    type="number"
+                    name="quantidade"
+                    id="quantidade"
+                    placeholder="1"
+                  />
                 </label>
               </p>
             </div>
@@ -81,7 +91,7 @@
             <tr *ngFor="let item of listaSelecao">
               <td>{{ item.id }}</td>
               <td>{{ item.descricaop }}</td>
-              <td>{{quantidade}}</td>
+              <td>{{ item.quantidade }}</td>
               <!-- <td>[(item.quantidade)]</td> -->
               <!-- <td><button (click)="selecionarItem(item)"
                   class="btnOrcar waves-effect waves-light btn-small red accent-4"><i
@@ -94,11 +104,13 @@
       </div>
     </main>
 
-    <a class="btnOrcar waves-effect waves-light btn-small blue darken-4" (click)="criarOrcamento()">
+    <a
+      class="btnOrcar waves-effect waves-light btn-small blue darken-4"
+      (click)="criarOrcamento()"
+    >
       <!-- <i class="material-icons right">file_download</i> -->
       Solicitar orçamento
     </a>
-
   </div>
 </main>
 <app-footer></app-footer>

@@ -10,7 +10,7 @@ export const environment = {
 
 export const environmentJava = {
   production: false,
-  BASE_URL_JAVA: 'https://orcafast-api-java.herokuapp.com/'
+  BASE_URL_JAVA: 'https://orcafast-api-java.herokuapp.com'
 
 };
 
