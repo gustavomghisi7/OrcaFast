@@ -6,6 +6,7 @@ import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { OrcamentoComponent } from './pages/orcamento/orcamento.component';
 
 import { AuthGuardAdmService } from './guards/auth-guard-adm.service';
 import { AuthGuardUserService } from './guards/auth-guard-user.service';
@@ -42,8 +43,11 @@ const routes: Routes = [
     path: 'catalogo/:idusuario',
     component: CatalogoComponent,
     canActivate: [AuthGuardUserService]
+  },
+  {
+    path: 'orcamento/:idusuario',
+    component: OrcamentoComponent
   }
-  
 ];
 
 @NgModule({

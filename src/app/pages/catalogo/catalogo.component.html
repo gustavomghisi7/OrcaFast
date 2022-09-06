@@ -115,12 +115,11 @@
         </table>
       </div>
     </main>
-
     <a
       class="btnOrcar waves-effect waves-light btn-small blue darken-4"
       (click)="criarOrcamento()"
+      [routerLink]="['/orcamento', idUsuario]"
     >
-      <!-- <i class="material-icons right">file_download</i> -->
       Solicitar orçamento
     </a>
   </div>

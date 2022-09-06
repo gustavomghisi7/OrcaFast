@@ -14,7 +14,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
-import { OrcamentoComponent } from './orcamento/orcamento.component';
+import { OrcamentoComponent } from './pages/orcamento/orcamento.component';
 
 @NgModule({
   declarations: [

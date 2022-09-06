@@ -55,14 +55,8 @@ export class PerfilComponent implements OnInit {
     ))
   }
 
-
-
   ngOnDestroy(): void{
     this.inscricaoGetUmUsuario.unsubscribe;
     this.inscricaoAlterarUsuario.unsubscribe;
   }
-
-
-
-  
 }
