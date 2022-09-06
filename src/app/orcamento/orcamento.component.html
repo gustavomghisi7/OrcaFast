@@ -1,0 +1,34 @@
+<main class="container">
+  <router-outlet></router-outlet>
+  <div class="row">
+    <table>
+      <thead>
+        <tr>
+          <th>CÓDIGO</th>
+          <th>NOME PRODUTO</th>
+          <th>QUANTIDADE</th>
+          <th>FORNECEDOR 1</th>
+          <th>FORNECEDOR 2</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let item of listaSelecao">
+          <td>{{ item.id }}</td>
+          <td>{{ item.descricaop }}</td>
+          <td>{{ item.quantidade }}</td>
+          <!-- <td>[(item.quantidade)]</td> -->
+          <td>
+            <button
+              (click)="selecionarItem(item)"
+              class="btnOrcar waves-effect waves-light btn-small blue darken-4"
+            >
+              <i class="medium material-icons">delete </i>
+            </button>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>

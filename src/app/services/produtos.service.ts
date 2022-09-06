@@ -30,5 +30,13 @@ export class ProdutosService {
     return this.http.get(`${environmentJava.BASE_URL_JAVA}/fornecedor`)
   }
 
+  getPrecos(){
+    return this.http.get(`${environmentJava.BASE_URL_JAVA}/produtos`)
+  }
+
+  getPrecosById(id: number){
+    return this.http.get(`${environmentJava.BASE_URL_JAVA}/produtos/${id}`)
+  }
+
 
 }
