@@ -44,7 +44,8 @@
     </div>
 
     <div class="row">
-      <div class="col s12 m4" *ngFor="let prod of produtos">
+      <!-- altera responsividade do card -->
+      <div class="col s12 m6 l4" *ngFor="let prod of produtos">
         <div class="card horizontal">
           <div class="card-image">
             <img src="{{ prod.imagem }}" />
@@ -74,6 +75,7 @@
                     name="quantidade"
                     id="quantidade"
                     placeholder="1"
+                    class="input-mobile"
                   />
                 </label>
               </p>
