@@ -1,6 +1,6 @@
 import { ProdutosService } from 'src/app/services/produtos.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 import { Subscription } from 'rxjs';
 
@@ -15,16 +15,24 @@ export class OrcamentoComponent implements OnInit {
 
   inscricaoGet: any = Subscription;
 
+
   ngOnInit(): void {
-    this.mostrarSelecao();
+    const routeParams = this.route.snapshot.paramMap;
+    const idOrcamento = Number(routeParams.get('idorcamento'));
+    this.mostrarOrcamentoById(idOrcamento);
+
   }
 
   selecao: any = [];
-  mostrarSelecao(): void {
-    this.inscricaoGet = this.service.mostrarOrcamento().subscribe(data => {
+  mostrarOrcamentoById(idOrcamento: number): void {
+    this.inscricaoGet = this.service.mostrarOrcamentoById(idOrcamento).subscribe(data => {
       this.selecao = data;
-      console.log(this.selecao);
     })
+
   }
 
+  ngOnDestroy(): void {
+    this.inscricaoGet.unsubscribe;
+
+  }
 }

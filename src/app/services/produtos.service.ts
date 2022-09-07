@@ -22,8 +22,12 @@ export class ProdutosService {
     return this.http.post(`${environmentJava.BASE_URL_JAVA}/orcamento`, dados)
   }
 
-  mostrarOrcamento(){
+  mostrarSelecao(){
     return this.http.get(`${environmentJava.BASE_URL_JAVA}/selecao`)
+  }
+
+  mostrarOrcamentoById(id: number){
+    return this.http.get(`${environmentJava.BASE_URL_JAVA}/selecao/orcamento/${id}`)
   }
 
   deletarFornecedor(id: number) {
