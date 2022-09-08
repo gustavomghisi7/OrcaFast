@@ -88,7 +88,7 @@
 
             <div class="input-field col s12 m6">
               <input
-                ngModel
+               (input) = "pegarCep($event)"
                 name="cep"
                 id="cep"
                 type="text"
@@ -100,7 +100,7 @@
 
             <div class="input-field col s12 m6">
               <input
-                ngModel
+              [(ngModel)] ="usuario.rua"
                 name="rua"
                 id="rua"
                 type="text"
@@ -142,7 +142,7 @@
               <div class="row">
                 <div class="input-field col s12 m12">
                   <input
-                    ngModel
+                  [(ngModel)] = "usuario.bairro"
                     name="bairro"
                     id="bairro"
                     type="text"
@@ -158,7 +158,7 @@
               <div class="row">
                 <div class="input-field col s12 m6">
                   <input
-                    ngModel
+                  [(ngModel)] = "usuario.estado"
                     name="estado"
                     id="estadoendereco"
                     type="text"
@@ -170,7 +170,7 @@
 
                 <div class="input-field col s12 m6">
                   <input
-                    ngModel
+                  [(ngModel)] = "usuario.cidade"
                     name="cidade"
                     id="cidade"
                     type="text"

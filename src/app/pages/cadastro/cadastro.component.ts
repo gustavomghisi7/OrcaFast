@@ -42,6 +42,34 @@ export class CadastroComponent implements OnInit {
   cadastrarUsuario(dados: any): void {
     this.inscricaoCadastrar =this.service.cadastrarUsuario(dados).subscribe(data => M.toast 
     ({ html: this.msg, classes: 'rounded green' }))
+    
+  }
+
+  capturarEndereco(cep: string){
+    this.service.pegarEndereco(cep).subscribe(data =>{
+      let endereco: any = {}
+      endereco = data
+      this.usuario.rua = endereco.logradouro
+      console.log(this.usuario.rua);
+      
+      this.usuario.bairro = endereco.bairro
+      console.log(this.usuario.bairro);
+      
+      this.usuario.estado = endereco.uf
+      console.log(this.usuario.estado);
+      
+      this.usuario.cidade = endereco.localidade
+      console.log(this.usuario.cidade);
+      
+      console.log(data)
+    })
+  }
+
+  pegarCep(evento: any){
+    let cep = evento.target.value
+    this.capturarEndereco(cep)
+    //console.log(cep);
+    
   }
 
   ngOnDestroy(): void{

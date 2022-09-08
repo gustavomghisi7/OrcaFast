@@ -78,6 +78,7 @@
 
           <div class="input-field col s12 m6">
             <input
+              (input) = "pegarCep($event)"
               [(ngModel)]="usuario.cep"
               id="cep"
               type="text"

@@ -14,6 +14,14 @@ export const environmentJava = {
 
 };
 
+export const environmentCep = {
+  production: false,
+  BASE_URL_CEP: 'https://viacep.com.br/ws'
+
+};
+
+
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

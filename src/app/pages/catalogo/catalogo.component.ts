@@ -85,10 +85,10 @@ export class CatalogoComponent implements OnInit {
     let dadosOrcamento = {
       usuario: { id: this.idUsuario },
     };
-
     this.service.criarOrcamento(dadosOrcamento).subscribe((data) => {
       this.orcamento = data
       this.salvarSelecao()
+      
     });
 
       }
