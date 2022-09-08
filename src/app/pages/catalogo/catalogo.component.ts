@@ -103,7 +103,7 @@ export class CatalogoComponent implements OnInit {
             id: this.idUsuario,
           },
         },
-        preco: 2,
+        preco: 0,
         produto: {
           categoria: {
             id: this.listaSelecao[i].categoria.id,
