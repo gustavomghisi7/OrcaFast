@@ -11,9 +11,9 @@ import { UsuariosService } from '../../services/usuarios.service';
 export class AdmComponent implements OnInit {
 
   constructor(private service: UsuariosService) { }
-  
+
   inscricaoGet: any = Subscription;
-  inscricaoDelet: any = Subscription; 
+  inscricaoDelet: any = Subscription;
   inscricaoGetFornecedor: any = Subscription;
   inscricaoDeletFornecedor: any = Subscription;
 
@@ -48,8 +48,14 @@ export class AdmComponent implements OnInit {
   mostrarFornecedor(): void {
     this.inscricaoGetFornecedor = this.service.getFornecedor().subscribe(data => {
       this.fornecedor = data
+      console.log(data)
     })
   }
+
+  // fornecedorById: number = 0
+  // mostrarFornecedorById(id: number){
+  //   this.
+  // }
 
   ngOnDestroy(): void{
     this.inscricaoDelet.unsubscribe;

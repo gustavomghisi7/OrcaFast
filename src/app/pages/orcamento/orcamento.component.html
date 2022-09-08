@@ -1,0 +1,31 @@
+<main class="container">
+  <router-outlet></router-outlet>
+  <div class="row">
+    <table>
+      <thead>
+        <tr>
+          <th>CÓDIGO</th>
+          <th>NOME PRODUTO</th>
+          <th>QUANTIDADE</th>
+          <th>FORNECEDOR 1</th>
+          <th>FORNECEDOR 2</th>
+        </tr>
+      </thead>
+
+    
+      <tbody>
+        
+        <tr *ngFor="let item of selecao">
+          <td>{{ item.id }}</td>
+          <td>{{ item.descricaop }}</td>
+          <td>{{ item.quantidade }}</td>
+          <td>[(item.quantidade)]</td>
+          <td>
+          </td>
+          <td></td>
+        </tr>
+      
+      </tbody>
+    </table>
+  </div>
+</main>

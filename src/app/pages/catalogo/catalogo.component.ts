@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutosService } from 'src/app/services/produtos.service';
 import { Subscription } from 'rxjs';
 
@@ -41,10 +41,9 @@ export class CatalogoComponent implements OnInit {
 
   constructor(
     private service: ProdutosService,
-    private route: ActivatedRoute
-
-
-  ) {  }
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   inscricaoGetProdutos: any = Subscription;
 
@@ -59,7 +58,7 @@ export class CatalogoComponent implements OnInit {
         this.produtos = data
         this.todosProdutos = data
       }
-    )
+      )
   }
 
   procurarProdutos(e: Event): void {
@@ -85,13 +84,14 @@ export class CatalogoComponent implements OnInit {
     let dadosOrcamento = {
       usuario: { id: this.idUsuario },
     };
-    this.service.criarOrcamento(dadosOrcamento).subscribe((data) => {
+
+    this.service.criarOrcamento(dadosOrcamento).subscribe((data: any) => {
       this.orcamento = data
       this.salvarSelecao()
-      
+      this.router.navigate([`/orcamento/${data.id}`]);
     });
 
-      }
+  }
 
   salvarSelecao() {
 
@@ -115,16 +115,14 @@ export class CatalogoComponent implements OnInit {
 
       };
 
-      console.log(this.objetoSelecao)
       this.service.salvarSelecao(this.objetoSelecao).subscribe((data) => {
         this.objetoSelecao = data;
-        console.log(data);
       });
     }
-    console.log(this.objetoSelecao)
   }
 
   ngOnDestroy(): void {
     this.inscricaoGetProdutos.unsubscribe;
+
   }
 }

@@ -58,6 +58,7 @@ export class PerfilComponent implements OnInit {
     
   }
 
+
   capturarEndereco(cep: string){
     this.service.pegarEndereco(cep).subscribe(data =>{
       let endereco: any = {}
@@ -90,8 +91,4 @@ export class PerfilComponent implements OnInit {
     this.inscricaoGetUmUsuario.unsubscribe;
     this.inscricaoAlterarUsuario.unsubscribe;
   }
-
-
-
-  
 }
