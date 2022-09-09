@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,6 +15,11 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { OrcamentoComponent } from './pages/orcamento/orcamento.component';
+
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(ptBr);
 
 @NgModule({
   declarations: [
@@ -34,7 +39,7 @@ import { OrcamentoComponent } from './pages/orcamento/orcamento.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ { provide: LOCALE_ID, useValue: 'pt' } ],
   bootstrap: [AppComponent]
 })
 

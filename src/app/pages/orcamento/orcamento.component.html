@@ -13,9 +13,9 @@
         </tr>
       </thead>
 
-    
+
       <tbody>
-        
+
         <tr *ngFor="let item of selecao">
           <td>{{ item.produto.id }}</td>
           <td>{{ item.descricaop }}</td>
@@ -30,19 +30,19 @@
           <td>
             <ng-container *ngFor="let prodForn of item.produtoFornecedor">
               <div>
-                <td>{{ prodForn.preco}}</td>
+                <td>{{ prodForn.preco | currency : 'BRL'}}</td>
               </div>
             </ng-container>
           </td>
           <td>
             <ng-container *ngFor="let prodForn of item.produtoFornecedor">
               <div>
-                <td>{{ prodForn.preco*item.quantidade}}</td>
+                <td>{{ prodForn.preco*item.quantidade | currency : 'BRL' }}</td>
               </div>
             </ng-container>
           </td>
         </tr>
-      
+
       </tbody>
     </table>
   </div>
