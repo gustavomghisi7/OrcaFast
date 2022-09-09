@@ -45,9 +45,11 @@ const routes: Routes = [
     canActivate: [AuthGuardUserService]
   },
   {
-    path: 'orcamento/:idorcamento',
+    path: 'orcamento/:idorcamento/:idusuario',
     component: OrcamentoComponent
   }
+
+  
 ];
 
 @NgModule({
