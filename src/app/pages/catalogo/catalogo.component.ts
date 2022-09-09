@@ -121,6 +121,10 @@ export class CatalogoComponent implements OnInit {
     }
   }
 
+  scrollTo(element: any): void {
+    (document.getElementById('secao-sel') as HTMLElement).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
+
   ngOnDestroy(): void {
     this.inscricaoGetProdutos.unsubscribe;
 
