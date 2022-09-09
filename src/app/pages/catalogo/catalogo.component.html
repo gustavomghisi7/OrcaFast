@@ -1,8 +1,8 @@
 <app-header></app-header>
 <main>
   <div class="container" style="padding-top: 5%">
-    <div class="row zerarMargem bg-azul">
-      <h3 class="tituloCatalogo h3-azul-oscuro" style="margin-left: 5%">
+    <div class="row bg-azul">
+      <h3 class="tituloCatalogo h3-azul-oscuro">
         Selecione os produtos que deseja orçar
       </h3>
     </div>
@@ -23,7 +23,7 @@
         </form>
       </div> -->
 
-      <div class="search s12 m6">
+      <div class="search s12 m12">
         <form class="col s12 m12">
           <div class="search">
             <div class="input-field">
@@ -35,11 +35,14 @@
                 (input)="procurarProdutos($event)"
               />
               <label for="icon_prefix2"
-                >Buscar produtos por nome, marca, código...</label
+                >Buscar produtos por nome, código ou categoria</label
               >
             </div>
           </div>
         </form>
+        <a (click)="scrollTo('secao-sel')" class= "col s12 m6 l4 selecao btnOrcar waves-effect waves-light btn-small blue center">
+          IR PARA SELEÇÃO
+        </a>
       </div>
     </div>
 
@@ -73,6 +76,7 @@
                     [(ngModel)]="prod.quantidade"
                     type="number"
                     min="1"
+                    value="1"
                     name="quantidade"
                     id="quantidade"
                     placeholder="0"
@@ -89,25 +93,28 @@
     <main class="container">
       <router-outlet></router-outlet>
       <div class="row">
-        <table>
+        <table  id="secao-sel">
           <thead>
             <tr>
               <th>CÓDIGO</th>
-              <th>NOME PRODUTO</th>
+              <th>PRODUTO</th>
               <th>QUANTIDADE</th>
+              <th>EXCLUIR PRODUTO</th>
             </tr>
           </thead>
 
           <tbody>
             <tr *ngFor="let item of listaSelecao">
               <td>{{ item.id }}</td>
-              <td>{{ item.descricaop }}</td>
+              <td>
+                <b>{{ item.descricaop }}</b>
+              </td>
               <td>{{ item.quantidade }}</td>
               <!-- <td>[(item.quantidade)]</td> -->
               <td>
                 <button
                   (click)="selecionarItem(item)"
-                  class="btnOrcar waves-effect waves-light btn-small blue darken-4"
+                  class="delete-btn btnOrcar waves-effect waves-light btn-small blue darken-4"
                 >
                   <i class="medium material-icons">delete </i>
                 </button>
@@ -124,6 +131,6 @@
     >
       Solicitar orçamento
     </a>
-  </div>
+  </div >
 </main>
 <app-footer></app-footer>

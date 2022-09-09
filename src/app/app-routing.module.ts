@@ -50,6 +50,8 @@ const routes: Routes = [
     component: OrcamentoComponent,
     canActivate: [AuthGuardOrcamentoService]
   }
+
+  
 ];
 
 @NgModule({
