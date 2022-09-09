@@ -88,7 +88,7 @@ export class CatalogoComponent implements OnInit {
     this.service.criarOrcamento(dadosOrcamento).subscribe((data: any) => {
       this.orcamento = data
       this.salvarSelecao()
-      this.router.navigate([`/orcamento/${data.id}`]);
+      this.router.navigate([`/orcamento/${data.id}/${this.idUsuario}`]);
     });
 
   }

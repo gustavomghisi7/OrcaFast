@@ -10,6 +10,7 @@ import { OrcamentoComponent } from './pages/orcamento/orcamento.component';
 
 import { AuthGuardAdmService } from './guards/auth-guard-adm.service';
 import { AuthGuardUserService } from './guards/auth-guard-user.service';
+import { AuthGuardOrcamentoService } from './guards/auth-guard-orcamento.service';
 
 const routes: Routes = [
   {
@@ -45,8 +46,9 @@ const routes: Routes = [
     canActivate: [AuthGuardUserService]
   },
   {
-    path: 'orcamento/:idorcamento',
-    component: OrcamentoComponent
+    path: 'orcamento/:idorcamento/:idusuario',
+    component: OrcamentoComponent,
+    canActivate: [AuthGuardOrcamentoService]
   }
 ];
 

@@ -30,6 +30,10 @@ export class ProdutosService {
     return this.http.get(`${environmentJava.BASE_URL_JAVA}/selecao/orcamento/${id}`)
   }
 
+  pegarUmOrcamento(id: number){
+    return this.http.get(`${environmentJava.BASE_URL_JAVA}/orcamento/${id}`)
+  }
+
   deletarFornecedor(id: number) {
     return this.http.delete(`${environmentJava.BASE_URL_JAVA}/fornecedor/${id}`)
   }
