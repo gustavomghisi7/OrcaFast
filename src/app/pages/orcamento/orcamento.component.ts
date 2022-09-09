@@ -27,6 +27,7 @@ export class OrcamentoComponent implements OnInit {
   mostrarOrcamentoById(idOrcamento: number): void {
     this.inscricaoGet = this.service.mostrarOrcamentoById(idOrcamento).subscribe(data => {
       this.selecao = data;
+    
       console.log(data)
     })
     

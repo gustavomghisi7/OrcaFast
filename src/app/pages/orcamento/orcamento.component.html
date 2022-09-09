@@ -3,12 +3,13 @@
   <div class="row">
     <table>
       <thead>
-        <tr>
+        <tr >
           <th>CÓDIGO</th>
           <th>NOME PRODUTO</th>
           <th>QUANTIDADE</th>
-          <th>FORNECEDOR 1</th>
-          <th>FORNECEDOR 2</th>
+          <th> FORNECEDOR</th>
+          <th> UNIÁRIO </th>
+          <th> QUANTITATIVO </th>
         </tr>
       </thead>
 
@@ -19,11 +20,27 @@
           <td>{{ item.produto.id }}</td>
           <td>{{ item.descricaop }}</td>
           <td>{{ item.quantidade }}</td>
-          <td>{{ item.preco}}</td>
-          <td>{{ item.preco}}</td>
           <td>
+            <ng-container *ngFor="let prodForn of item.produtoFornecedor">
+              <div>
+                <td>{{ prodForn.fornecedor.razaosocial}}</td>
+              </div>
+            </ng-container>
           </td>
-          <td></td>
+          <td>
+            <ng-container *ngFor="let prodForn of item.produtoFornecedor">
+              <div>
+                <td>{{ prodForn.preco}}</td>
+              </div>
+            </ng-container>
+          </td>
+          <td>
+            <ng-container *ngFor="let prodForn of item.produtoFornecedor">
+              <div>
+                <td>{{ prodForn.preco*item.quantidade}}</td>
+              </div>
+            </ng-container>
+          </td>
         </tr>
       
       </tbody>
