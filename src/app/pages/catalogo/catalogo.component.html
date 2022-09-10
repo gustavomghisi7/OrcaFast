@@ -40,9 +40,11 @@
             </div>
           </div>
         </form>
-        <a (click)="scrollTo('secao-sel')" class= "col s12 m6 l4 selecao btnOrcar waves-effect waves-light btn-small blue center">
+        <div class="col s12 m12 l12 container-selecao">
+        <a (click)="scrollTo('secao-sel')" class= " selecao btnOrcar waves-effect waves-light btn-small blue center">
           IR PARA SELEÇÃO
         </a>
+      </div>
       </div>
     </div>
 
@@ -125,12 +127,14 @@
         </table>
       </div>
     </main>
+    <div class="col s12 m12 l12 container-selecao">
     <a
-      class="btnOrcar waves-effect waves-light btn-small blue darken-4"
+      class=" waves-effect waves-light btn-small blue darken-4"
       (click)="criarOrcamento()"
     >
       Solicitar orçamento
     </a>
+    </div>
   </div >
 </main>
 <app-footer></app-footer>
