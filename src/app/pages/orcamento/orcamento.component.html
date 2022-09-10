@@ -26,21 +26,21 @@
             <td>{{ item.quantidade }}</td>
             <td>
               <ng-container *ngFor="let prodForn of item.produtoFornecedor">
-                <div style="border-bottom: 5px solid pink">
+                <div class="sublineado">
                   <td>{{ prodForn.fornecedor.razaosocial }}</td>
                 </div>
               </ng-container>
             </td>
             <td>
               <ng-container *ngFor="let prodForn of item.produtoFornecedor">
-                <div>
+                <div class="sublineado">
                   <td>{{ prodForn.preco | currency: "BRL" }}</td>
                 </div>
               </ng-container>
             </td>
             <td>
               <ng-container *ngFor="let prodForn of item.produtoFornecedor">
-                <div>
+                <div class="sublineado">
                   <td>
                     {{ prodForn.preco * item.quantidade | currency: "BRL" }}
                   </td>
