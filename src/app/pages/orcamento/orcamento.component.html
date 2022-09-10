@@ -1,17 +1,15 @@
 <app-header></app-header>
-<main style="margin-bottom: 5%;">
+<main style="margin-bottom: 5%">
   <div class="container" style="padding-top: 5%">
-    <h3 class="tituloOrcamento h3-azul-oscuro">
-      Planilha de Orçamento
-    </h3>
+    <h3 class="tituloOrcamento h3-azul-oscuro">Planilha de Orçamento</h3>
   </div>
 
   <main class="container">
     <router-outlet></router-outlet>
     <div class="row">
       <table class="highlight responsive-table centered">
-        <thead >
-          <tr >
+        <thead>
+          <tr>
             <th>CÓDIGO</th>
             <th>PRODUTO</th>
             <th>QUANTIDADE</th>
@@ -20,53 +18,81 @@
             <th>VALOR TOTAL</th>
           </tr>
         </thead>
-  
-  
+
         <tbody class="centered">
-  
-          <tr *ngFor="let item of selecao" >
+          <tr *ngFor="let item of selecao">
             <td>{{ item.produto.id }}</td>
             <td>{{ item.descricaop }}</td>
             <td>{{ item.quantidade }}</td>
             <td>
               <ng-container *ngFor="let prodForn of item.produtoFornecedor">
-                <div style="border-bottom: 5px solid pink;">
-                  <td>{{ prodForn.fornecedor.razaosocial}}</td>
+                <div style="border-bottom: 5px solid pink">
+                  <td>{{ prodForn.fornecedor.razaosocial }}</td>
                 </div>
               </ng-container>
             </td>
             <td>
               <ng-container *ngFor="let prodForn of item.produtoFornecedor">
                 <div>
-                  <td>{{ prodForn.preco | currency : 'BRL'}}</td>
+                  <td>{{ prodForn.preco | currency: "BRL" }}</td>
                 </div>
               </ng-container>
             </td>
             <td>
               <ng-container *ngFor="let prodForn of item.produtoFornecedor">
-                <div >
-                  <td>{{ prodForn.preco*item.quantidade | currency : 'BRL' }}</td>
+                <div>
+                  <td>
+                    {{ prodForn.preco * item.quantidade | currency: "BRL" }}
+                  </td>
                 </div>
               </ng-container>
             </td>
-            <hr>
+            <hr />
           </tr>
-  
+        </tbody>
+      </table>
+
+      <table
+        hidden
+        id="excel_table"
+        class="highlight responsive-table centered"
+      >
+        <thead>
+          <tr>
+            <th>CÓDIGO</th>
+            <th>PRODUTO</th>
+            <th>QUANTIDADE</th>
+            <th>FORNECEDOR</th>
+            <th>VALOR UNITÁRIO</th>
+            <th>VALOR TOTAL</th>
+          </tr>
+        </thead>
+
+        <tbody class="centered">
+          <tr *ngFor="let item of selecaoExportar">
+            <td>{{ item.produto.id }}</td>
+            <td>{{ item.produto.descricaop }}</td>
+            <td>{{ item.quantidade }}</td>
+            <td>{{ item.fornecedor.razaosocial }}</td>
+            <td>{{ item.preco | currency: "BRL" }}</td>
+            <td>{{ item.preco * item.quantidade | currency: "BRL" }}</td>
+            <hr />
+          </tr>
         </tbody>
       </table>
     </div>
 
     <div class="row">
       <a
-        class="btnDownload waves-effect waves-light btn-small blue darken-4">
+        (click)="exportarexcel()"
+        class="btnDownload waves-effect waves-light btn-small blue darken-4"
+      >
         Baixar Planilha
       </a>
     </div>
   </main>
   <div class="row">
-    <a
-    
-      class="btnVoltar waves-effect waves-light btn-small blue darken-4">
+    <a class="btnVoltar waves-effect waves-light btn-small blue darken-4">
       voltar
       <i class="material-icons right">arrow_forward</i>
     </a>
@@ -74,5 +100,3 @@
 </main>
 
 <app-footer></app-footer>
-
-

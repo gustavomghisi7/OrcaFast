@@ -1,9 +1,8 @@
+import { IProduto, IProdutoCatalago, IOrcamento } from './../../types';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutosService } from 'src/app/services/produtos.service';
 import { Subscription } from 'rxjs';
-
-
 
 @Component({
   selector: 'app-catalogo',
@@ -11,16 +10,12 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./catalogo.component.css'],
 })
 export class CatalogoComponent implements OnInit {
-
-
-
   idUsuario: number = 0;
-  produtos: any = [];
+  produtos: IProdutoCatalago[] = [];
   todosProdutos: any = [];
-  orcamento: any = {};
+  orcamento: IOrcamento = {};
 
-  listaIdProdutos: any = {};
-  listaSelecao: any = {};
+  listaSelecao: IProdutoCatalago[] = [];
 
   objetoSelecao: any = {
     orcamento: {
@@ -43,7 +38,7 @@ export class CatalogoComponent implements OnInit {
     private service: ProdutosService,
     private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {}
 
   inscricaoGetProdutos: any = Subscription;
 
@@ -52,13 +47,10 @@ export class CatalogoComponent implements OnInit {
   }
 
   pegarTodosOsProdutos(): void {
-    this.inscricaoGetProdutos = this.service
-      .getProdutos()
-      .subscribe((data) => {
-        this.produtos = data
-        this.todosProdutos = data
-      }
-      )
+    this.inscricaoGetProdutos = this.service.getProdutos().subscribe((data) => {
+      this.produtos = data;
+      this.todosProdutos = data;
+    });
   }
 
   procurarProdutos(e: Event): void {
@@ -70,11 +62,18 @@ export class CatalogoComponent implements OnInit {
     });
   }
 
-  selecionarItem(item: any) {
+  selecionarItem(item: IProdutoCatalago) {
     // const produto = this.produtos.find((prod: any) => prod.id == item.id);
     // produto.selecionado = !(produto.selecionado ?? false);
     item.selecionado = !(item.selecionado || false);
-    this.listaSelecao = this.produtos.filter((prod: any) => prod.selecionado);
+    if (item.selecionado) {
+      item.quantidade = 1;
+    } else {
+      item.quantidade = 0;
+    }
+    this.listaSelecao = this.produtos.filter(
+      (prod: IProdutoCatalago) => prod.selecionado
+    );
   }
 
   criarOrcamento() {
@@ -85,16 +84,14 @@ export class CatalogoComponent implements OnInit {
       usuario: { id: this.idUsuario },
     };
 
-    this.service.criarOrcamento(dadosOrcamento).subscribe((data: any) => {
-      this.orcamento = data
-      this.salvarSelecao()
+    this.service.criarOrcamento(dadosOrcamento).subscribe((data) => {
+      this.orcamento = data;
+      this.salvarSelecao();
       this.router.navigate([`/orcamento/${data.id}/${this.idUsuario}`]);
     });
-
   }
 
   salvarSelecao() {
-
     for (let i = 0; i < this.listaSelecao.length; i++) {
       this.objetoSelecao = {
         orcamento: {
@@ -109,10 +106,8 @@ export class CatalogoComponent implements OnInit {
             id: this.listaSelecao[i].categoria.id,
           },
           id: this.listaSelecao[i].id,
-
         },
-        quantidade: this.listaSelecao[i].quantidade
-
+        quantidade: this.listaSelecao[i].quantidade,
       };
 
       this.service.salvarSelecao(this.objetoSelecao).subscribe((data) => {
@@ -122,11 +117,14 @@ export class CatalogoComponent implements OnInit {
   }
 
   scrollTo(element: any): void {
-    (document.getElementById('secao-sel') as HTMLElement).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    (document.getElementById('secao-sel') as HTMLElement).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
   }
 
   ngOnDestroy(): void {
     this.inscricaoGetProdutos.unsubscribe;
-
   }
 }
