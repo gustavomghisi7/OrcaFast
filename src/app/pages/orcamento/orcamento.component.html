@@ -94,7 +94,8 @@
     </div>
   </main>
   <div class="row col s12 m12 l12 btnVoltar">
-    <a class=" waves-effect waves-light btn-small blue">
+    <a [routerLink]="['/catalogo', usuario.id]" class=" waves-effect waves-light btn-small blue">
+      
       <i class="material-icons left">arrow_back</i>
       voltar
     </a>
