@@ -22,6 +22,7 @@ export class AuthGuardOrcamentoService implements CanActivate{
           return true
         }else{
           //this.router.navigate([''])
+          //window.location.reload()
           alert('Usuário sem acesso')
           return false
         }

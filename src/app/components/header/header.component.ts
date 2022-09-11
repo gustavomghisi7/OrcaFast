@@ -1,5 +1,5 @@
 import { Component,  OnInit} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { UsuariosService } from '../../services/usuarios.service';
@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit{
   idUsuario: number = 0
   usuario: any = {}
 
-  constructor(private usuarioService: UsuariosService, private route: ActivatedRoute) { }
+  constructor(private usuarioService: UsuariosService, private route: ActivatedRoute, private router: Router) { }
 
   inscricaoGetUmUsuario: any = Subscription;
 
@@ -37,7 +37,8 @@ export class HeaderComponent implements OnInit{
   logout(): void {
     localStorage.removeItem('usertoken')
     this.userLogado = ''
-    window.location.reload()
+    this.router.navigate([''])
+    //window.location.reload()
   }
 
 }
