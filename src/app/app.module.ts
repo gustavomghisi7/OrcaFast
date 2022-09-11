@@ -18,6 +18,7 @@ import { OrcamentoComponent } from './pages/orcamento/orcamento.component';
 
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { PerfilFornecedorComponent } from './pages/perfil-fornecedor/perfil-fornecedor.component';
 
 registerLocaleData(ptBr);
 
@@ -32,6 +33,7 @@ registerLocaleData(ptBr);
     AdmComponent,
     CadastroComponent,
     OrcamentoComponent,
+    PerfilFornecedorComponent,
   ],
   imports: [
     BrowserModule,

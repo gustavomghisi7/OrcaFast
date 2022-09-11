@@ -11,6 +11,7 @@ import { OrcamentoComponent } from './pages/orcamento/orcamento.component';
 import { AuthGuardAdmService } from './guards/auth-guard-adm.service';
 import { AuthGuardUserService } from './guards/auth-guard-user.service';
 import { AuthGuardOrcamentoService } from './guards/auth-guard-orcamento.service';
+import { PerfilFornecedorComponent } from './pages/perfil-fornecedor/perfil-fornecedor.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,16 @@ const routes: Routes = [
     path: 'orcamento/:idorcamento/:idusuario',
     component: OrcamentoComponent,
     canActivate: [AuthGuardOrcamentoService]
+  },
+  {
+    path: 'perfilFornecedor',
+    component: PerfilFornecedorComponent,
+    canActivate: [AuthGuardAdmService]
+  },
+  {
+    path: 'perfilFornecedor/:idfornecedor',
+    component: PerfilFornecedorComponent,
+    canActivate: [AuthGuardAdmService]
   }
 
   

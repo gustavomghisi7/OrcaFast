@@ -58,4 +58,8 @@ export class UsuariosService {
     return this.http.get(`${environmentCep.BASE_URL_CEP}/${cep}/json`)
   }
 
+  getUmFornecedor(id: number) {
+    return this.http.get(`${environmentJava.BASE_URL_JAVA}/fornecedor/${id}`)
+  }
+
 }
