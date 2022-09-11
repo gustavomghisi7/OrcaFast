@@ -43,18 +43,6 @@ export class ProdutosService {
     return this.http.get(`${environmentJava.BASE_URL_JAVA}/orcamento/${id}`);
   }
 
-  deletarFornecedor(id: number) {
-    return this.http.delete(
-      `${environmentJava.BASE_URL_JAVA}/fornecedor/${id}`
-    );
-  }
-
-  getFornecedor() {
-    return this.http.get<IFornecedor>(
-      `${environmentJava.BASE_URL_JAVA}/fornecedor`
-    );
-  }
-
   getPrecos() {
     return this.http.get(`${environmentJava.BASE_URL_JAVA}/produtos`);
   }

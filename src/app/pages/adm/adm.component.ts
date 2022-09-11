@@ -52,11 +52,6 @@ export class AdmComponent implements OnInit {
     })
   }
 
-  // fornecedorById: number = 0
-  // mostrarFornecedorById(id: number){
-  //   this.
-  // }
-
   ngOnDestroy(): void{
     this.inscricaoDelet.unsubscribe;
     this.inscricaoGet.unsubscribe;
