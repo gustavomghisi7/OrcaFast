@@ -122,7 +122,8 @@ video.responsive-video {
 
 /* Pra diminuir a distância entre o título e a imagem que ele descreve */
 .tituloEquipe {
-    margin: 0 0 50px 40px
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 h6 {
