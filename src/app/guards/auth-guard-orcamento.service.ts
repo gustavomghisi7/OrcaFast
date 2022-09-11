@@ -21,7 +21,8 @@ export class AuthGuardOrcamentoService implements CanActivate{
         if (orcamento.usuario.id == idUsuario) {
           return true
         }else{
-          this.router.navigate([''])
+          //this.router.navigate([''])
+          alert('Usuário sem acesso')
           return false
         }
     })

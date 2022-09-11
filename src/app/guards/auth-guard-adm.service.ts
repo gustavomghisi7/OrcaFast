@@ -22,7 +22,7 @@ export class AuthGuardAdmService implements CanActivate {
     if (usuarioLogadoAdm) {
       return true
     } else {
-      this.router.navigate([''])
+      alert('Usuário sem acesso')
       return false
     }
   }

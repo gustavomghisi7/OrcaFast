@@ -24,7 +24,8 @@ export class AuthGuardUserService implements CanActivate {
     if ((user.perfil == "USUARIO" && user.id == idUsuario) || user.perfil == 'ADM') {
       return true
     } else {
-      this.router.navigate([''])
+      //this.router.navigate([''])
+      alert('Usuário sem acesso')
       return false
     }
   }
