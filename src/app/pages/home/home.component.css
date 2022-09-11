@@ -4,6 +4,7 @@ body {
 
 .container {
     width: 100% !important;
+    padding:0 30px;
 }
 
 .h1-italic-azul {
@@ -11,18 +12,33 @@ body {
     font-style: italic;
 }
 
+.h2-italic-azul{
+  color: #2196f3;
+  font-style: italic;
+}
+
 nav .nav-wrapper {
     color: #64b5f6 !important;
 }
 
+.texto-secao {
+  padding-bottom: 20px;
+  max-width: 70ch;
+}
 
-/* 
+.texto-secao span {
+  color:#2196f3;
+  font-style: italic;
+}
+
+/*
     Foi usada pra colocar background azul na div com a logo,
     na div do texto + imagem do porquinho e na div do box-inferior
     que está servindo para arrendondar as bordas
 */
 .bg-azul {
     background-color: var(--azul-claro-bg) !important;
+    padding-bottom: 20px;;
 }
 
 
@@ -41,6 +57,7 @@ nav .nav-wrapper {
 
 .ajuste-card {
     height: 460px;
+    margin-bottom: 50px;
 }
 
 .padding-img {
@@ -95,7 +112,7 @@ video.responsive-video {
     max-width: 85%;
 }
 
-/* 
+/*
     Classe declarada em todas as divs col contendo fotos da
     equipe para criar um pouco de espaço entre as imagens
 */
@@ -105,7 +122,8 @@ video.responsive-video {
 
 /* Pra diminuir a distância entre o título e a imagem que ele descreve */
 .tituloEquipe {
-    margin: 0 0 50px 40px
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 h6 {
@@ -178,12 +196,12 @@ a.col.s12.links.ajusteEsqueciSenha{
         /*colocar margem de 4%  à direita onde a classe é declarada*/
         margin-right: 4%!important;
     }
-    
+
     .primeiraImgMargin {
         /*coloca margem de 4% à esquerda onde a classe é declarada*/
         margin-left: 8%!important;
     }
-    
+
     .espacoTexto {
         margin: .2rem 0 2.912rem 0;
     }
@@ -194,10 +212,16 @@ a.col.s12.links.ajusteEsqueciSenha{
         margin: 0 20px;
     }
 
+    .container {
+      width: 100% !important;
+      padding:0 10px;
+  }
+
     /* Ajusta o titulo da equipe para celular */
     .tituloEquipe {
         margin: 0 0 50px 0px
     }
+
 
     /* Para ajustar as fotos da equipe no celular */
     .ultimaImgMargin {
@@ -226,7 +250,7 @@ a.col.s12.links.ajusteEsqueciSenha{
     }
 
     .h2-azul-oscuro {
-        font-size: 35px ; 
+        font-size: 35px ;
     }
 
     .h1-azul{

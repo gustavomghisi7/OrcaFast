@@ -38,7 +38,7 @@ export class CatalogoComponent implements OnInit {
     private service: ProdutosService,
     private route: ActivatedRoute,
     private router: Router
-  ) {}
+  ) { }
 
   inscricaoGetProdutos: any = Subscription;
 
@@ -77,18 +77,23 @@ export class CatalogoComponent implements OnInit {
   }
 
   criarOrcamento() {
-    const routeParams = this.route.snapshot.paramMap;
-    this.idUsuario = Number(routeParams.get('idusuario'));
+    if (this.listaSelecao.length == 0) {
+      alert('Selecione pelo menos um produto para gerar o orçamento')
+    } else {
+      const routeParams = this.route.snapshot.paramMap;
+      this.idUsuario = Number(routeParams.get('idusuario'));
 
-    let dadosOrcamento = {
-      usuario: { id: this.idUsuario },
-    };
+      let dadosOrcamento = {
+        usuario: { id: this.idUsuario },
+      };
 
-    this.service.criarOrcamento(dadosOrcamento).subscribe((data) => {
-      this.orcamento = data;
-      this.salvarSelecao();
-      this.router.navigate([`/orcamento/${data.id}/${this.idUsuario}`]);
-    });
+      this.service.criarOrcamento(dadosOrcamento).subscribe((data) => {
+        this.orcamento = data;
+        this.salvarSelecao();
+        this.router.navigate([`/orcamento/${data.id}/${this.idUsuario}`]);
+      });
+    }
+
   }
 
   salvarSelecao() {
