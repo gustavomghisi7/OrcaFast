@@ -70,4 +70,5 @@ textarea.materialize-textarea {
 .bntPerfil {
   text-align: center;
   margin-bottom: 20px;
+  width: 50% !important;
 }

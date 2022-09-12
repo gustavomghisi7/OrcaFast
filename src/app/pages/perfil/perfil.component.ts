@@ -37,6 +37,11 @@ export class PerfilComponent implements OnInit {
   inscricaoAlterarUsuario: any = Subscription;
   
   ngOnInit(): void {
+    var user = this.service.getDadosToken()
+    if(user.perfil == 'USUARIO') {
+      const btnVoltar = document.getElementById('btnVoltar');
+      if(btnVoltar) btnVoltar.style.visibility = "hidden";
+    }
     
     M.updateTextFields()
 
