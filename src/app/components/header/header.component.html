@@ -1,4 +1,25 @@
-<nav>
+<nav class="navegacao">
+
+    <a routerLink="/" class="">
+      <img
+        src="assets/img/logo_horizontal.png"
+        alt="logo"
+        class="logo-orca"
+      />
+    </a>
+
+    <!-- links de navegação -->
+    <ul class="links-nav">
+      <li><a [routerLink]="['/perfil', usuario.id]" class="">Perfil<i class="material-icons right">person</i></a></li>
+      <li><a [routerLink]="['/catalogo', usuario.id]" class="logout whit-text">Catálogo<i class="material-icons right">dashboard</i></a></li>
+      <li><a routerLink="/adm" class="logout whit-text">Adm<i class="material-icons right">lock</i></a></li>
+      <li><a routerLink="/" (click)="logout()" class="logout whit-text">Sair<i class="material-icons right">exit_to_app</i></a></li>
+    </ul>
+
+  </nav>
+
+
+<!-- <nav>
   <div class="nav-wrapper indigo darken-4">
     <a routerLink="/" class="brand-logo">
       <img
@@ -7,71 +28,17 @@
         class="logo-nav"
         style="position: relative"
       />
-    </a>
+    </a> -->
 
     <!-- links de navegação -->
-    <ul class="right hide-on-med-and-down">
+    <!-- <ul class="right hide-on-med-and-down">
       <li><a [routerLink]="['/perfil', usuario.id]" class="logout whit-text">Perfil<i class="material-icons right">person</i></a></li>
       <li><a [routerLink]="['/catalogo', usuario.id]" class="logout whit-text">Catálogo<i class="material-icons right">dashboard</i></a></li>
       <li><a routerLink="/adm" class="logout whit-text">Adm<i class="material-icons right">lock</i></a></li>
       <li><a routerLink="/" (click)="logout()" class="logout whit-text">Sair<i class="material-icons right">exit_to_app</i></a></li>
     </ul>
   </div>
-</nav>
+</nav> -->
 
-
-<!-- header anterior
-  <nav>
-  <div class="nav-wrapper indigo darken-4">
-    <a
-      routerLink="/home"
-      data-target="mobile-demo"
-      class="right sidenav-trigger"
-    >
-      <i class="material-icons">exit_to_app</i>
-    </a>
-    <a routerLink="/" class="brand-logo">
-      <img
-        src="assets/img/logo_horizontal.png"
-        alt="logo"
-        class="logo-nav"
-        style="position: relative"
-      />
-    </a>
-    <a
-      routerLink="/perfil"
-      data-target="mobile-demo"
-      class="left sidenav-trigger"
-    >
-      <i class="material-icons">person</i>
-    </a>
-    <a
-      routerLink="/adm"
-      data-target="mobile-demo"
-      class="right sidenav-trigger"
-    >
-      <i class="material-icons">icon adm</i>
-    </a>
-
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li>
-        <a routerLink="/perfil" class="logout whit-text"
-          >Perfil<i class="material-icons right">person</i></a
-        >
-      </li>
-      <li>
-        <a (click)="logout()" class="logout whit-text"
-          >Sair<i class="material-icons right">exit_to_app</i></a
-        >
-      </li>
-      <li>
-        <a routerLink="/adm" class="logout whit-text"
-          >Adm<i class="material-icons right">icon adm</i></a
-        >
-      </li>
-    </ul>
-  </div>
-</nav>
--->
 
 <router-outlet></router-outlet>

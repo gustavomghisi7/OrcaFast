@@ -1,17 +1,47 @@
-nav,
-nav .nav-wrapper i,
-nav a.sidenav-trigger,
-nav a.sidenav-trigger i {
-  height: 64px;
-  line-height: 64px;
+* {
+  box-sizing: border-box;
 }
 
-.logo-nav {
-  width: 134px;
-  margin-top: 0px;
-  margin: 6% 15%;
+.navegacao {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--indigo-oscuro);
+  align-items: center;
+}
+
+.logo-orca {
+  width: 200px;
+  /* margin-top: 0px;
+  margin: 6% 15%; */
+}
+
+.logo-orca {
+  padding: 2em;
+  margin-top: 2em;;
 }
 
 .logout:hover{
   text-decoration-line: underline;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  nav.navegacao {
+    flex-direction: column;
+    margin-top: 0;
+    display: flex;
+    position: relative;
+    height: 135px;
+  }
+
+  .links-nav {
+    display: flex;
+  }
+  ul.links-nav {
+    color: var(--indigo-oscuro);
+    position: absolute;
+    margin: 0;
+  }
 }
