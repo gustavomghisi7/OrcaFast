@@ -22,7 +22,11 @@ export class HeaderComponent implements OnInit{
 
   ngOnInit(): void {
     
-  
+    var user = this.usuarioService.getDadosToken()
+    if(user.perfil == 'USUARIO') {
+      const linkCadeado = document.getElementById('linkCadeado');
+      if(linkCadeado) linkCadeado.style.visibility = "hidden";
+    }
 
     M.AutoInit()
     const routeParams = this.route.snapshot.paramMap;

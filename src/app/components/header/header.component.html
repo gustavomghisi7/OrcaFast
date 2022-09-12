@@ -10,9 +10,9 @@
 
     <!-- links de navegação -->
     <ul class="links-nav">
+      <li><a [routerLink]="['/adm']" id="linkCadeado">Adm<i class="material-icons right esconde-icone">lock</i></a></li>
       <li><a [routerLink]="['/perfil', usuario.id]" class="">Perfil<i class="material-icons right esconde-icone">person</i></a></li>
       <li><a [routerLink]="['/catalogo', usuario.id]" class="">Catálogo<i class="material-icons right esconde-icone">dashboard</i></a></li>
-      <li><a routerLink="/adm" class="">Adm<i class="material-icons right esconde-icone">lock</i></a></li>
       <li><a routerLink="/" (click)="logout()" class="">Sair<i class="material-icons right esconde-icone">exit_to_app</i></a></li>
     </ul>
 
