@@ -7,9 +7,9 @@
   <main class="container">
     <router-outlet></router-outlet>
     <div class="row">
-      <table class="highlight responsive-table centered">
+      <table class="highlight centered">
         <thead>
-          <tr>
+          <tr class="adjusted-font">
             <th>CÓDIGO</th>
             <th>PRODUTO</th>
             <th>QUANTIDADE</th>
@@ -21,27 +21,27 @@
 
         <tbody class="centered">
           <tr *ngFor="let item of selecao">
-            <td>{{ item.produto.id }}</td>
-            <td>{{ item.descricaop }}</td>
-            <td>{{ item.quantidade }}</td>
-            <td>
+            <td class="adjusted-font zero-padding">{{ item.produto.id }}</td>
+            <td class="adjusted-font zero-padding">{{ item.descricaop }}</td>
+            <td class="adjusted-font zero-padding">{{ item.quantidade }}</td>
+            <td class="zero-padding">
               <ng-container *ngFor="let prodForn of item.produtoFornecedor">
                 <div class="sublineado">
-                  <td>{{ prodForn.fornecedor.razaosocial }}</td>
+                  <td class="adjusted-font">{{ prodForn.fornecedor.razaosocial }}</td>
                 </div>
               </ng-container>
             </td>
-            <td>
+            <td class="zero-padding">
               <ng-container *ngFor="let prodForn of item.produtoFornecedor">
                 <div class="sublineado">
-                  <td>{{ prodForn.preco | currency: "BRL" }}</td>
+                  <td class="adjusted-font">{{ prodForn.preco | currency: "BRL" }}</td>
                 </div>
               </ng-container>
             </td>
-            <td>
+            <td class="zero-padding">
               <ng-container *ngFor="let prodForn of item.produtoFornecedor">
                 <div class="sublineado">
-                  <td>
+                  <td class="adjusted-font">
                     {{ prodForn.preco * item.quantidade | currency: "BRL" }}
                   </td>
                 </div>
