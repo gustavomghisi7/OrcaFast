@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  // BASE_URL: 'https://orcafast.herokuapp.com'
-  BASE_URL: 'http://localhost:8080',
+  BASE_URL: 'https://orcafast.herokuapp.com'
 };
 
 export const environmentJava = {

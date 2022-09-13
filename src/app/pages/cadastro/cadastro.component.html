@@ -4,14 +4,6 @@
   <form #f="ngForm" (ngSubmit)="cadastrarUsuario(f.value)">
     <div class="container">
       <div class="row imgRow">
-        <!-- <section class="col s12 m2 sectionImg">
-          <img
-            class="fotoPerfil"
-            src="assets/img/logo-usuario.png"
-            alt="logo cliente"
-          />
-        </section> -->
-
         <section class="col s12 m10">
           <div class="row">
             <div class="input-field col s12 m6">
@@ -190,30 +182,32 @@
               </select>
               <label>Selecione o perfil</label>
             </div> -->
-
-            <label>
-              <input
-                [(ngModel)]="usuario.perfil"
-                name="perfil"
-                value="ADM"
-                class="with-gap"
-                type="radio"
-              />
-              <span for="perfil">ADM</span>
-            </label>
-            <label>
-              <input
-                [(ngModel)]="usuario.perfil"
-                name="perfil"
-                value="USUARIO"
-                class="with-gap"
-                type="radio"
-              />
-              <span for="perfil">USUARIO</span>
-            </label>
+            <div class=" perfil col s12 m6">
+              <label for="">Perfil</label>
+              <label>
+                <input
+                  [(ngModel)]="usuario.perfil"
+                  name="perfil"
+                  value="ADM"
+                  class="with-gap"
+                  type="radio"
+                />
+                <span for="perfil">Administrador</span>
+              </label>
+              <label>
+                <input
+                  [(ngModel)]="usuario.perfil"
+                  name="perfil"
+                  value="USUARIO"
+                  class="with-gap"
+                  type="radio"
+                />
+                <span for="perfil">Usuário</span>
+              </label>
+            </div>
           </div>
 
-          <div class="col s12 m6 bntPerfil">
+          <div class="col s12 m12 bntPerfil">
             <button class="waves-effect waves-light btn-small blue darken-4">
               Cadastrar novo usuário
             </button>
