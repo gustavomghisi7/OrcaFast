@@ -4,23 +4,19 @@
 
 export const environment = {
   production: false,
-  BASE_URL: 'https://orcafast.herokuapp.com'
-
+  // BASE_URL: 'https://orcafast.herokuapp.com'
+  BASE_URL: 'http://localhost:8080',
 };
 
 export const environmentJava = {
   production: false,
-  BASE_URL_JAVA: 'https://orcafast-api-java.herokuapp.com'
-
+  BASE_URL_JAVA: 'https://orcafast-api-java.herokuapp.com',
 };
 
 export const environmentCep = {
   production: false,
-  BASE_URL_CEP: 'https://viacep.com.br/ws'
-
+  BASE_URL_CEP: 'https://viacep.com.br/ws',
 };
-
-
 
 /*
  * For easier debugging in development mode, you can import the following file
