@@ -32,9 +32,13 @@ export class HeaderComponent implements OnInit{
     const routeParams = this.route.snapshot.paramMap;
 
     this.idUsuario = Number(routeParams.get('idusuario'))
-    this.inscricaoGetUmUsuario = this.usuarioService.getUmUsuario(this.idUsuario).subscribe(data => {
-    this.usuario = data
-  })}
+    if(this.idUsuario) {
+      this.inscricaoGetUmUsuario = this.usuarioService.getUmUsuario(this.idUsuario).subscribe(data => {
+      this.usuario = data
+    })} else {
+    this.usuario = this.usuarioService.getDadosToken()
+  }
+}
 
   userLogado: any = this.usuarioService.getDadosToken()
 
