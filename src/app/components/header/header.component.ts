@@ -1,4 +1,4 @@
-import { Component,  OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -11,7 +11,7 @@ declare const M: any
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit {
 
   idUsuario: number = 0
   usuario: any = {}
@@ -21,24 +21,25 @@ export class HeaderComponent implements OnInit{
   inscricaoGetUmUsuario: any = Subscription;
 
   ngOnInit(): void {
-    
+
     var user = this.usuarioService.getDadosToken()
-    if(user.perfil == 'USUARIO') {
+    if (user.perfil == 'USUARIO') {
       const linkCadeado = document.getElementById('linkCadeado');
-      if(linkCadeado) linkCadeado.style.visibility = "hidden";
+      if (linkCadeado) linkCadeado.style.visibility = "hidden";
     }
 
     M.AutoInit()
     const routeParams = this.route.snapshot.paramMap;
 
     this.idUsuario = Number(routeParams.get('idusuario'))
-    if(this.idUsuario) {
+    if (this.idUsuario) {
       this.inscricaoGetUmUsuario = this.usuarioService.getUmUsuario(this.idUsuario).subscribe(data => {
-      this.usuario = data
-    })} else {
-    this.usuario = this.usuarioService.getDadosToken()
+        this.usuario = data
+      })
+    } else {
+      this.usuario = this.usuarioService.getDadosToken()
+    }
   }
-}
 
   userLogado: any = this.usuarioService.getDadosToken()
 
@@ -46,7 +47,6 @@ export class HeaderComponent implements OnInit{
     localStorage.removeItem('usertoken')
     this.userLogado = ''
     this.router.navigate([''])
-    //window.location.reload()
   }
 
 }

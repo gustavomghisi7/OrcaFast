@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import jwt_decode from "jwt-decode"
 
-import { environment, environmentCep, environmentJava  } from 'src/environments/environment';
+import { environment, environmentCep, environmentJava } from 'src/environments/environment';
 
-@Injectable({ providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class UsuariosService {
 
   constructor(private http: HttpClient) { }
@@ -36,13 +36,13 @@ export class UsuariosService {
   getDadosToken() {
     var token = localStorage.getItem('usertoken') || ''
 
-    if(token !== ''){
+    if (token !== '') {
       var bodyToken = jwt_decode(token)
-      var tokenJson= JSON.stringify(bodyToken)
+      var tokenJson = JSON.stringify(bodyToken)
       var tokenDecodificado = JSON.parse(tokenJson)
       return tokenDecodificado
     }
-    
+
     return ''
   }
 
@@ -54,7 +54,7 @@ export class UsuariosService {
     return this.http.get(`${environmentJava.BASE_URL_JAVA}/fornecedor`)
   }
 
-  pegarEndereco(cep: string){
+  pegarEndereco(cep: string) {
     return this.http.get(`${environmentCep.BASE_URL_CEP}/${cep}/json`)
   }
 

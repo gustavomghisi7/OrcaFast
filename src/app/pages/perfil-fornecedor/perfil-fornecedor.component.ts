@@ -18,24 +18,23 @@ export class PerfilFornecedorComponent implements OnInit {
   email: string = ''
   telefone: string = ''
 
-
   constructor(private service: UsuariosService, private route: ActivatedRoute) { }
-  
+
   inscricaoGetUmFornecedor: any = Subscription;
-  
+
   ngOnInit(): void {
-    
+
     M.updateTextFields()
     M.AutoInit()
     const routeParams = this.route.snapshot.paramMap;
-    
+
     this.idFornecedor = Number(routeParams.get('idfornecedor'))
     this.inscricaoGetUmFornecedor = this.service.getUmFornecedor(this.idFornecedor).subscribe(data => {
       this.fornecedor = data
-  })}
+    })
+  }
 
-  
-  ngOnDestroy(): void{
+  ngOnDestroy(): void {
     this.inscricaoGetUmFornecedor.unsubscribe;
 
   }

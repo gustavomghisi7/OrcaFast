@@ -8,7 +8,7 @@ import { environmentJava } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class ProdutosService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getProdutos() {
     return this.http.get<IProdutoCatalago[]>(

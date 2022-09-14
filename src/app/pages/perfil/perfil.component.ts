@@ -30,19 +30,18 @@ export class PerfilComponent implements OnInit {
   logo: string = ''
   perfil: string = ''
 
-  constructor(private service:UsuariosService, private route: ActivatedRoute) { }
-
+  constructor(private service: UsuariosService, private route: ActivatedRoute) { }
 
   inscricaoGetUmUsuario: any = Subscription;
   inscricaoAlterarUsuario: any = Subscription;
-  
+
   ngOnInit(): void {
     var user = this.service.getDadosToken()
-    if(user.perfil == 'USUARIO') {
+    if (user.perfil == 'USUARIO') {
       const btnVoltar = document.getElementById('btnVoltar');
-      if(btnVoltar) btnVoltar.style.visibility = "hidden";
+      if (btnVoltar) btnVoltar.style.visibility = "hidden";
     }
-    
+
     M.updateTextFields()
 
     M.AutoInit()
@@ -50,49 +49,40 @@ export class PerfilComponent implements OnInit {
 
     this.idUsuario = Number(routeParams.get('idusuario'))
     this.inscricaoGetUmUsuario = this.service.getUmUsuario(this.idUsuario).subscribe(data => {
-    this.usuario = data
-  })}
+      this.usuario = data
+    })
+  }
 
   msg: string = "Usuário alterado"
 
   salvarAlteracoes(): void {
     this.inscricaoAlterarUsuario = this.service.alterarUsuario(this.usuario).subscribe(data => M.toast
-    (
-      { html: this.msg, classes: 'rounded green' }
-    ))
-    
+      (
+        { html: this.msg, classes: 'rounded green' }
+      ))
+
   }
 
-
-  capturarEndereco(cep: string){
-    this.service.pegarEndereco(cep).subscribe(data =>{
+  capturarEndereco(cep: string) {
+    this.service.pegarEndereco(cep).subscribe(data => {
       let endereco: any = {}
       endereco = data
       this.usuario.rua = endereco.logradouro
-      console.log(this.usuario.rua);
-      
+
       this.usuario.bairro = endereco.bairro
-      console.log(this.usuario.bairro);
-      
+
       this.usuario.estado = endereco.uf
-      console.log(this.usuario.estado);
-      
+
       this.usuario.cidade = endereco.localidade
-      console.log(this.usuario.cidade);
-      
-      console.log(data)
     })
   }
 
-  pegarCep(evento: any){
+  pegarCep(evento: any) {
     let cep = evento.target.value
     this.capturarEndereco(cep)
-    //console.log(cep);
-    
   }
 
-
-  ngOnDestroy(): void{
+  ngOnDestroy(): void {
     this.inscricaoGetUmUsuario.unsubscribe;
     this.inscricaoAlterarUsuario.unsubscribe;
   }

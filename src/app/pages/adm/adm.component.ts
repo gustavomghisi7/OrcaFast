@@ -31,16 +31,16 @@ export class AdmComponent implements OnInit {
 
   msg: string = ''
   deletarUsuario(id: number): void {
-    this.inscricaoDelet =this.service.deletarUsuario(id).subscribe(() => {
+    this.inscricaoDelet = this.service.deletarUsuario(id).subscribe(() => {
       this.msg = 'Usuario excluído com sucesso',
-      window.location.reload()
+        window.location.reload()
     })
   }
 
-   deletarFornecedor(id: number): void {
-    this.inscricaoDelet =this.service.deletarFornecedor(id).subscribe(() => {
+  deletarFornecedor(id: number): void {
+    this.inscricaoDelet = this.service.deletarFornecedor(id).subscribe(() => {
       this.msg = 'Fornecedor excluído com sucesso',
-      window.location.reload()
+        window.location.reload()
     })
   }
 
@@ -48,11 +48,10 @@ export class AdmComponent implements OnInit {
   mostrarFornecedor(): void {
     this.inscricaoGetFornecedor = this.service.getFornecedor().subscribe(data => {
       this.fornecedor = data
-      console.log(data)
     })
   }
 
-  ngOnDestroy(): void{
+  ngOnDestroy(): void {
     this.inscricaoDelet.unsubscribe;
     this.inscricaoGet.unsubscribe;
     this.inscricaoDeletFornecedor.unsubscribe;

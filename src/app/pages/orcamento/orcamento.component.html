@@ -27,76 +27,69 @@
             <td class="zero-padding">
               <ng-container *ngFor="let prodForn of item.produtoFornecedor">
                 <div class="sublineado">
-                  <td class="adjusted-font">{{ prodForn.fornecedor.razaosocial }}</td>
-                </div>
-              </ng-container>
-            </td>
-            <td class="zero-padding">
-              <ng-container *ngFor="let prodForn of item.produtoFornecedor">
-                <div class="sublineado">
-                  <td class="adjusted-font">{{ prodForn.preco | currency: "BRL" }}</td>
-                </div>
-              </ng-container>
-            </td>
-            <td class="zero-padding">
-              <ng-container *ngFor="let prodForn of item.produtoFornecedor">
-                <div class="sublineado">
-                  <td class="adjusted-font">
-                    {{ prodForn.preco * item.quantidade | currency: "BRL" }}
-                  </td>
-                </div>
-              </ng-container>
-            </td>
-            <hr />
-          </tr>
-        </tbody>
-      </table>
+            <td class="adjusted-font">{{ prodForn.fornecedor.razaosocial }}</td>
+    </div>
+    </ng-container>
+    </td>
+    <td class="zero-padding">
+      <ng-container *ngFor="let prodForn of item.produtoFornecedor">
+        <div class="sublineado">
+    <td class="adjusted-font">{{ prodForn.preco | currency: "BRL" }}</td>
+    </div>
+    </ng-container>
+    </td>
+    <td class="zero-padding">
+      <ng-container *ngFor="let prodForn of item.produtoFornecedor">
+        <div class="sublineado">
+    <td class="adjusted-font">
+      {{ prodForn.preco * item.quantidade | currency: "BRL" }}
+    </td>
+    </div>
+    </ng-container>
+    </td>
+    <hr />
+    </tr>
+    </tbody>
+    </table>
 
-      <table
-        hidden
-        id="excel_table"
-        class="highlight responsive-table centered"
-      >
-        <thead>
-          <tr>
-            <th>CÓDIGO</th>
-            <th>PRODUTO</th>
-            <th>QUANTIDADE</th>
-            <th>FORNECEDOR</th>
-            <th>VALOR UNITÁRIO</th>
-            <th>VALOR TOTAL</th>
-          </tr>
-        </thead>
+    <table hidden id="excel_table" class="highlight responsive-table centered hide">
+      <thead>
+        <tr>
+          <th>CÓDIGO</th>
+          <th>PRODUTO</th>
+          <th>QUANTIDADE</th>
+          <th>FORNECEDOR</th>
+          <th>VALOR UNITÁRIO</th>
+          <th>VALOR TOTAL</th>
+        </tr>
+      </thead>
 
-        <tbody class="centered">
-          <tr *ngFor="let item of selecaoExportar">
-            <td>{{ item.produto.id }}</td>
-            <td>{{ item.produto.descricaop }}</td>
-            <td>{{ item.quantidade }}</td>
-            <td>{{ item.fornecedor.razaosocial }}</td>
-            <td>{{ item.preco | currency: "BRL" }}</td>
-            <td>{{ item.preco * item.quantidade | currency: "BRL" }}</td>
-            <hr />
-          </tr>
-        </tbody>
-      </table>
+      <tbody class="centered">
+        <tr *ngFor="let item of selecaoExportar">
+          <td>{{ item.produto.id }}</td>
+          <td>{{ item.produto.descricaop }}</td>
+          <td>{{ item.quantidade }}</td>
+          <td>{{ item.fornecedor.razaosocial }}</td>
+          <td>{{ item.preco | currency: "BRL" }}</td>
+          <td>{{ item.preco * item.quantidade | currency: "BRL" }}</td>
+          <hr />
+        </tr>
+      </tbody>
+    </table>
 
     </div>
 
     <div class="row">
       <div class="col s12 m12 l12 container-selecao">
-      <a
-        (click)="exportarexcel()"
-        class="waves-effect waves-light btn-small blue darken-4"
-      >
-        Baixar Planilha
-      </a>
-    </div>
+        <a (click)="exportarexcel()" class="waves-effect waves-light btn-small blue darken-4">
+          Baixar Planilha
+        </a>
+      </div>
     </div>
   </main>
   <div class="row col s12 m12 l12 btnVoltar">
     <a [routerLink]="['/catalogo', usuario.id]" class=" waves-effect waves-light btn-small blue">
-      
+
       <i class="material-icons left">arrow_back</i>
       voltar
     </a>

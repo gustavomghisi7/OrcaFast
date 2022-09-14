@@ -63,8 +63,6 @@ export class CatalogoComponent implements OnInit {
   }
 
   selecionarItem(item: IProdutoCatalago) {
-    // const produto = this.produtos.find((prod: any) => prod.id == item.id);
-    // produto.selecionado = !(produto.selecionado ?? false);
     item.selecionado = !(item.selecionado || false);
     if (item.selecionado) {
       item.quantidade = 1;

@@ -20,10 +20,10 @@ export class OrcamentoComponent implements OnInit {
   usuario: any = {}
 
   constructor(
-    private serviceUsuario:UsuariosService,
+    private serviceUsuario: UsuariosService,
     private service: ProdutosService,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   inscricaoGetUmUsuario: any = Subscription;
   inscricaoGet: any = Subscription;
@@ -41,8 +41,8 @@ export class OrcamentoComponent implements OnInit {
 
     this.idUsuario = Number(routeParams.get('idusuario'))
     this.inscricaoGetUmUsuario = this.serviceUsuario.getUmUsuario(this.idUsuario).subscribe(data => {
-    this.usuario = data
-  })
+      this.usuario = data
+    })
   }
 
   selecao: ISelecao[] = [];
@@ -63,9 +63,6 @@ export class OrcamentoComponent implements OnInit {
           );
           return novaListaProdutoFornecedor;
         });
-
-        console.log(this.selecaoExportar);
-        console.log(data);
       });
   }
 

@@ -7,10 +7,10 @@ import { UsuariosService } from '../services/usuarios.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuardOrcamentoService implements CanActivate{
+export class AuthGuardOrcamentoService implements CanActivate {
 
   constructor(private router: Router, private service: ProdutosService, private services: UsuariosService) { }
-  
+
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     var user = this.services.getDadosToken()
@@ -18,20 +18,18 @@ export class AuthGuardOrcamentoService implements CanActivate{
     const idOrcamento = Number(routeParams.get('idorcamento'))
     const idUsuario = Number(routeParams.get('idusuario'))
     var orcamento: any = {}
-    this.service.pegarUmOrcamento(idOrcamento).subscribe(data =>{
-        orcamento = data
-        if (orcamento.usuario.id == idUsuario) {
-          return true
-        }else{
-          this.router.navigate([''])
-          //window.location.reload()
-          alert('Usuário sem acesso')
-          return false
-        }
+    this.service.pegarUmOrcamento(idOrcamento).subscribe(data => {
+      orcamento = data
+      if (orcamento.usuario.id == idUsuario) {
+        return true
+      } else {
+        this.router.navigate([''])
+        alert('Usuário sem acesso')
+        return false
+      }
     })
     if (user.id != idUsuario) {
       this.router.navigate([''])
-          //window.location.reload()
       alert('Usuário sem acesso')
       return false
     }

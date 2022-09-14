@@ -8,43 +8,22 @@
     </div>
 
     <div class="row">
-      <!-- <div class="col s12 m6">
-        <form action="#">
-          <div class="file-field input-field">
-            <div class="btn blue">
-              <span>inserir arquivo</span>
-              <input type="file" multiple />
-            </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate upload" type="text" placeholder="Suba sua planilha de orçamento" />
-            </div>
-          </div>
-          <div class="planilha">Baixar planilha modelo para preencher</div>
-        </form>
-      </div> -->
 
       <div class="search s12 m12">
         <form class="col s12 m12">
           <div class="search">
             <div class="input-field">
               <i class="material-icons prefix blue-text">search</i>
-              <input
-                id="icon_prefix2"
-                class="materialize-textarea"
-                type="text"
-                (input)="procurarProdutos($event)"
-              />
-              <label for="icon_prefix2"
-                >Buscar produtos por nome</label
-              >
+              <input id="icon_prefix2" class="materialize-textarea" type="text" (input)="procurarProdutos($event)" />
+              <label for="icon_prefix2">Buscar produtos por nome</label>
             </div>
           </div>
         </form>
         <div class="col s12 m12 l12 container-selecao">
-        <a (click)="scrollTo('secao-sel')" class= " selecao btnOrcar waves-effect waves-light btn-small blue center">
-          IR PARA SELEÇÃO
-        </a>
-      </div>
+          <a (click)="scrollTo('secao-sel')" class=" selecao btnOrcar waves-effect waves-light btn-small blue center">
+            IR PARA SELEÇÃO
+          </a>
+        </div>
       </div>
     </div>
 
@@ -65,25 +44,12 @@
               <p>{{ prod.categoria.descricaoc }}</p>
               <p class="card-action">
                 <label>
-                  <input
-                    type="checkbox"
-                    name="checkbox"
-                    (click)="selecionarItem(prod)"
-                    [checked]="prod.selecionado"
-                  />
+                  <input type="checkbox" name="checkbox" (click)="selecionarItem(prod)" [checked]="prod.selecionado" />
                   <span class="blue-text">Selecionar</span>
                 </label>
                 <label>
-                  <input
-                    [(ngModel)]="prod.quantidade"
-                    type="number"
-                    min="1"
-                    value="1"
-                    name="quantidade"
-                    id="quantidade"
-                    placeholder="0"
-                    class="input-mobile"
-                  />
+                  <input [(ngModel)]="prod.quantidade" type="number" min="1" value="1" name="quantidade" id="quantidade"
+                    placeholder="0" class="input-mobile" />
                 </label>
               </p>
             </div>
@@ -95,7 +61,7 @@
     <main class="container">
       <router-outlet></router-outlet>
       <div class="row">
-        <table  id="secao-sel">
+        <table id="secao-sel">
           <thead>
             <tr>
               <th>CÓDIGO</th>
@@ -112,12 +78,9 @@
                 <b>{{ item.descricaop }}</b>
               </td>
               <td>{{ item.quantidade }}</td>
-              <!-- <td>[(item.quantidade)]</td> -->
               <td>
-                <button
-                  (click)="selecionarItem(item)"
-                  class="delete-btn btnOrcar waves-effect waves-light btn-small blue darken-4"
-                >
+                <button (click)="selecionarItem(item)"
+                  class="delete-btn btnOrcar waves-effect waves-light btn-small blue darken-4">
                   <i class="medium material-icons">delete </i>
                 </button>
               </td>
@@ -128,13 +91,10 @@
       </div>
     </main>
     <div class="col s12 m12 l12 container-selecao">
-    <a
-      class=" waves-effect waves-light btn-small blue darken-4"
-      (click)="criarOrcamento()"
-    >
-      Solicitar orçamento
-    </a>
+      <a class=" waves-effect waves-light btn-small blue darken-4" (click)="criarOrcamento()">
+        Solicitar orçamento
+      </a>
     </div>
-  </div >
+  </div>
 </main>
 <app-footer></app-footer>

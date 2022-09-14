@@ -4,66 +4,42 @@
   <div class="container">
     <div class="row imgRow">
       <section class="col s12 m2 sectionImg">
-        <!-- <img src="../../../assets/upload-perfil/1.png" width="100px"> -->
-      </section>    
-      
+      </section>
+
       <section class="col s12 m10">
         <div class="row">
           <div class="input-field col s12 m6">
-            <input
-              [(ngModel)]="fornecedor.cnpj"
-              id="clientecnpj"
-              type="text"
-              class="validate"
-              readonly
-              placeholder=" "
-            />
+            <input [(ngModel)]="fornecedor.cnpj" id="clientecnpj" type="text" class="validate" readonly
+              placeholder=" " />
             <label for="cnpj" class="active">CNPJ</label>
           </div>
 
           <div class="input-field col s12 m6">
-            <input
-              [(ngModel)]="fornecedor.razaosocial"
-              id="razaosocial"
-              type="text"
-              class="validate"
-              readonly
-              placeholder=" "
-            />
+            <input [(ngModel)]="fornecedor.razaosocial" id="razaosocial" type="text" class="validate" readonly
+              placeholder=" " />
             <label for="razaosocial">Razão Social</label>
           </div>
 
           <div class="input-field col s12 m6">
-            <input
-              [(ngModel)]="fornecedor.email"
-              id="email"
-              type="email"
-              class="validate"
-              placeholder=" "
-            />
+            <input [(ngModel)]="fornecedor.email" id="email" type="email" class="validate" placeholder=" " />
             <label for="email">E-mail</label>
           </div>
 
           <div class="input-field col s12 m6">
-            <input
-              [(ngModel)]="fornecedor.telefone"
-              id="telefoneFixo"
-              type="tel"
-              class="validate"
-              placeholder="(##) ####-####"
-            />
+            <input [(ngModel)]="fornecedor.telefone" id="telefoneFixo" type="tel" class="validate"
+              placeholder="(##) ####-####" />
             <label for="telefoneFixo">Telefone Fixo</label>
           </div>
-   
+
         </div>
 
         <div class="row col s12 m12 l12 btnVoltar">
-            <a [routerLink]="['/adm']" class=" waves-effect waves-light btn-small blue">
-              
-              <i class="material-icons left">arrow_back</i>
-              voltar
-            </a>
-          </div>
+          <a [routerLink]="['/adm']" class=" waves-effect waves-light btn-small blue">
+
+            <i class="material-icons left">arrow_back</i>
+            voltar
+          </a>
+        </div>
       </section>
     </div>
   </div>

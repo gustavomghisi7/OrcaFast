@@ -29,7 +29,7 @@ export class CadastroComponent implements OnInit {
   logo: string = '';
   perfil: string = '';
 
-  constructor(private service: UsuariosService) {}
+  constructor(private service: UsuariosService) { }
 
   msg: string = 'Usuário cadastrado com sucesso';
 
@@ -45,8 +45,6 @@ export class CadastroComponent implements OnInit {
       .subscribe((data) =>
         M.toast({ html: this.msg, classes: 'rounded green' })
       );
-    console.log(this.usuario);
-    console.log(this.usuario.perfil);
   }
 
   capturarEndereco(cep: string) {
@@ -54,25 +52,18 @@ export class CadastroComponent implements OnInit {
       let endereco: any = {};
       endereco = data;
       this.usuario.rua = endereco.logradouro;
-      console.log(this.usuario.rua);
 
       this.usuario.bairro = endereco.bairro;
-      console.log(this.usuario.bairro);
 
       this.usuario.estado = endereco.uf;
-      console.log(this.usuario.estado);
 
       this.usuario.cidade = endereco.localidade;
-      console.log(this.usuario.cidade);
-
-      console.log(data);
     });
   }
 
   pegarCep(evento: any) {
     let cep = evento.target.value;
     this.capturarEndereco(cep);
-    //console.log(cep);
   }
 
   ngOnDestroy(): void {

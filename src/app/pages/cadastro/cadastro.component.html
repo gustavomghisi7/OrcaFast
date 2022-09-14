@@ -7,124 +7,58 @@
         <section class="col s12 m10">
           <div class="row">
             <div class="input-field col s12 m6">
-              <input
-                ngModel
-                name="cnpj"
-                id="clientecnpj"
-                type="text"
-                class="validate"
-                placeholder=" "
-              />
+              <input ngModel name="cnpj" id="clientecnpj" type="text" class="validate" placeholder=" " />
               <label for="cnpj" class="active">CNPJ</label>
             </div>
 
             <div class="input-field col s12 m6">
-              <input
-                ngModel
-                name="razaosocial"
-                id="razaosocial"
-                type="text"
-                class="validate"
-                placeholder=" "
-              />
+              <input ngModel name="razaosocial" id="razaosocial" type="text" class="validate" placeholder=" " />
               <label for="razaosocial">Razão Social</label>
             </div>
 
             <div class="input-field col s12 m6">
-              <input
-                ngModel
-                name="email"
-                id="email"
-                type="email"
-                class="validate"
-                placeholder=" "
-              />
+              <input ngModel name="email" id="email" type="email" class="validate" placeholder=" " />
               <label for="email">E-mail</label>
             </div>
 
             <div class="input-field col s12 m6">
-              <input
-                ngModel
-                name="senha"
-                id="senha"
-                type="password"
-                class="validate"
-                placeholder=" "
-              />
+              <input ngModel name="senha" id="senha" type="password" class="validate" placeholder=" " />
               <label for="senha">Senha</label>
             </div>
 
             <div class="input-field col s12 m6">
-              <input
-                ngModel
-                name="telefone"
-                id="telefoneFixo"
-                type="tel"
-                class="validate"
-                placeholder="(##) ####-####"
-              />
+              <input ngModel name="telefone" id="telefoneFixo" type="tel" class="validate"
+                placeholder="(##) ####-####" />
               <label for="telefoneFixo">Telefone Fixo</label>
             </div>
 
             <div class="input-field col s12 m6">
-              <input
-                ngModel
-                name="celular"
-                id="telefoneCelular"
-                type="tel"
-                class="validate"
-                placeholder="(##) #####-####"
-              />
+              <input ngModel name="celular" id="telefoneCelular" type="tel" class="validate"
+                placeholder="(##) #####-####" />
               <label for="telefoneCelular">Telefone Celular</label>
             </div>
 
             <div class="input-field col s12 m6">
-              <input
-                (input)="pegarCep($event)"
-                name="cep"
-                id="cep"
-                type="text"
-                class="validate"
-                placeholder="#####-###"
-              />
+              <input (input)="pegarCep($event)" name="cep" id="cep" type="text" class="validate"
+                placeholder="#####-###" />
               <label for="cep">Cep</label>
             </div>
 
             <div class="input-field col s12 m6">
-              <input
-                [(ngModel)]="usuario.rua"
-                name="rua"
-                id="rua"
-                type="text"
-                class="validate"
-                placeholder=" "
-              />
+              <input [(ngModel)]="usuario.rua" name="rua" id="rua" type="text" class="validate" placeholder=" " />
               <label for="rua">Rua</label>
             </div>
 
             <div class="col s12 m6">
               <div class="row">
                 <div class="input-field col s6 m4">
-                  <input
-                    ngModel
-                    name="numeroendereco"
-                    id="numero"
-                    type="text"
-                    class="validate"
-                    placeholder=" "
-                  />
+                  <input ngModel name="numeroendereco" id="numero" type="text" class="validate" placeholder=" " />
                   <label for="numero">Número</label>
                 </div>
 
                 <div class="input-field col s6 m8">
-                  <input
-                    ngModel
-                    name="complementoendereco"
-                    id="complemento"
-                    type="text"
-                    class="validate"
-                    placeholder=" "
-                  />
+                  <input ngModel name="complementoendereco" id="complemento" type="text" class="validate"
+                    placeholder=" " />
                   <label for="complemento">Complemento</label>
                 </div>
               </div>
@@ -133,14 +67,8 @@
             <div class="col s12 m6">
               <div class="row">
                 <div class="input-field col s12 m12">
-                  <input
-                    [(ngModel)]="usuario.bairro"
-                    name="bairro"
-                    id="bairro"
-                    type="text"
-                    class="validate"
-                    placeholder=" "
-                  />
+                  <input [(ngModel)]="usuario.bairro" name="bairro" id="bairro" type="text" class="validate"
+                    placeholder=" " />
                   <label for="bairro">Bairro</label>
                 </div>
               </div>
@@ -149,59 +77,27 @@
             <div class="col s12 m6">
               <div class="row">
                 <div class="input-field col s12 m6">
-                  <input
-                    [(ngModel)]="usuario.estado"
-                    name="estado"
-                    id="estadoendereco"
-                    type="text"
-                    class="validate"
-                    placeholder=" "
-                  />
+                  <input [(ngModel)]="usuario.estado" name="estado" id="estadoendereco" type="text" class="validate"
+                    placeholder=" " />
                   <label for="estadoendereco">UF</label>
                 </div>
 
                 <div class="input-field col s12 m6">
-                  <input
-                    [(ngModel)]="usuario.cidade"
-                    name="cidade"
-                    id="cidade"
-                    type="text"
-                    class="validate"
-                    placeholder=" "
-                  />
+                  <input [(ngModel)]="usuario.cidade" name="cidade" id="cidade" type="text" class="validate"
+                    placeholder=" " />
                   <label for="cidade">Cidade</label>
                 </div>
               </div>
             </div>
 
-            <!-- <div class="input-field col s12">
-              <select [(ngModel)]="usuario.perfil">
-                <option value="" disabled selected>Perfil</option>
-                <option value="ADM">ADM</option>
-                <option value="USUARIO">USUARIO</option>
-              </select>
-              <label>Selecione o perfil</label>
-            </div> -->
             <div class=" perfil col s12 m6">
               <label for="">Perfil</label>
               <label>
-                <input
-                  [(ngModel)]="usuario.perfil"
-                  name="perfil"
-                  value="ADM"
-                  class="with-gap"
-                  type="radio"
-                />
+                <input [(ngModel)]="usuario.perfil" name="perfil" value="ADM" class="with-gap" type="radio" />
                 <span for="perfil">Administrador</span>
               </label>
               <label>
-                <input
-                  [(ngModel)]="usuario.perfil"
-                  name="perfil"
-                  value="USUARIO"
-                  class="with-gap"
-                  type="radio"
-                />
+                <input [(ngModel)]="usuario.perfil" name="perfil" value="USUARIO" class="with-gap" type="radio" />
                 <span for="perfil">Usuário</span>
               </label>
             </div>
@@ -214,10 +110,7 @@
           </div>
 
           <div id="btnVoltar" class="row col s12 m12 l12 btnVoltar">
-            <a
-              [routerLink]="['/adm']"
-              class="waves-effect waves-light btn-small blue"
-            >
+            <a [routerLink]="['/adm']" class="waves-effect waves-light btn-small blue">
               <i class="material-icons left">arrow_back</i>
               voltar
             </a>
